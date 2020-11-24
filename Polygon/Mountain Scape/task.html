@@ -1,0 +1,81 @@
+<!-- Describe task in general -->
+<p style="text-align: center">
+ <img src="https://py-static.checkio.org/media/task/media/d6a770d7c6ee4a9da938ad4f84002ae9/mountain_scape_image.png" style="max-height:130px; padding: 10px;"/>
+ <p>
+  You are given the coordinates of the top of the triangle as input values.
+  <ul>
+   <li>
+    The slope angle is 45 degrees.
+   </li>
+   <li>
+    The base is always on the x-axis.
+   </li>
+  </ul>
+  You must return the total area of all triangles.
+But count the overlapping areas only once.
+ </p>
+ <p>
+  <strong>
+   NOTE:
+  </strong>
+  <ul>
+   <li>
+    The sum of the X and Y coordinates is always even. (e.g. (1, 3) (0, 2) ...)
+   </li>
+  </ul>
+ </p>
+ <!-- Give some usage examples -->
+ <div class="for_info_only">
+  <p>
+   <strong>
+    Example:
+   </strong>
+  </p>
+  <pre class="brush: python">mountain_scape([(1, 1), (4, 2), (7, 3)]) == 13
+mountain_scape([(0, 2), (5, 3), (7, 5)]) == 29
+mountain_scape([(1, 3), (5, 3), (5, 5), (8, 4)]) == 37</pre>
+  <table>
+   <tr>
+    <td>
+     <img src="https://py-static.checkio.org/media/task/media/d6a770d7c6ee4a9da938ad4f84002ae9/example.png" style="max-height:200px; padding: 10px;"/>
+    </td>
+   </tr>
+  </table>
+ </div>
+ <!-- Explain input and output values -->
+ <p>
+  <strong>
+   Input:
+  </strong>
+  A list of a tuple of two integers.
+ </p>
+ <p>
+  <strong>
+   Output:
+  </strong>
+  An integer.
+ </p>
+ <!-- Here you can explain how it can be used in development -->
+ <!-- The section is optional -->
+ <p>
+  <strong>
+   Precondition:
+  </strong>
+  <br/>
+  <ul>
+   <li>
+    0 ≤ x ≤ 100
+   </li>
+   <li>
+    1 ≤ y ≤ 50
+   </li>
+   <li>
+    (x+y) % 2 == 0
+   </li>
+   <li>
+    1 ≤ len(tops) ≤ 50
+   </li>
+  </ul>
+ </p>
+</p>
+<p><a href="https://py.checkio.org/en/mission/mountain-scape">See the task on CheckiO</a></p>

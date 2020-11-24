@@ -1,0 +1,40 @@
+<p>
+  From a set of ints (which will be an iterator of the sorted list) you have to create a list of closed intervals as tuples, so the intervals are covering all the values found in the set. After that you have to create an iterator object which is linked to this list.
+</p>
+
+<p>
+  A closed interval includes its endpoints! The interval <em>1..5</em>, for example,
+  includes each value <em>x</em> that satisfies the condition
+  <em>1&nbsp;<=&nbsp;x&nbsp;<=&nbsp;5</em>.
+</p>
+
+<p>
+  Values can only be in the same interval if the difference between a value and the next
+  smaller value in the set equals one, otherwise a new interval begins. Of course, the
+  start value of an interval is excluded from this rule.<br>
+  A single value, that doesn’t fit into an existing interval becomes the start- and
+  endpoint of a new interval.
+</p>
+
+<p>
+  <strong>Input:</strong> An iterator of the sorted list of ints.
+</p>
+
+<p>
+  <strong>Output:</strong> An iterator object linked to the list of tuples.
+</p>
+
+<div class="for_info_only">
+  <p>
+    <strong>Examples:</strong>
+  </p>
+<pre class="brush: python">
+list(create_intervals(iter(sorted(list({1, 2, 3, 4, 5, 7, 8, 12}))))) == [
+                                      (1, 5), (7, 8), (12, 12)]
+list(create_intervals(iter(sorted(list({1, 2, 3, 6, 7, 8, 4, 5}))))) == [
+                                      (1, 8)]</pre>
+</div>
+
+
+
+<p><a href="https://py.checkio.org/en/mission/create-intervals-iterator-version">See the task on CheckiO</a></p>

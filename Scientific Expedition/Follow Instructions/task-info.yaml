@@ -1,0 +1,19 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def follow(instructions):\n    # your code here\n    return (0, 0)\n\n\n\
+    if __name__ == '__main__':\n    print(\"Example:\")\n    print(follow(\"fflff\"\
+    ))\n    \n    # These \"asserts\" are used for self-checking and not for an auto-testing\n\
+    \    assert follow(\"fflff\") == (-1, 4)\n    assert follow(\"ffrff\") == (1,\
+    \ 4)\n    assert follow(\"fblr\") == (0, 0)\n    print(\"Coding complete? Click\
+    \ 'Check' to earn cool rewards!\")\n"
+  learner_created: false
+status: Unchecked
+code: "def follow(instructions):\n    # your code here\n    return (0, 0)\n\n\nif\
+  \ __name__ == '__main__':\n    print(\"Example:\")\n    print(follow(\"fflff\"))\n\
+  \    \n    # These \"asserts\" are used for self-checking and not for an auto-testing\n\
+  \    assert follow(\"fflff\") == (-1, 4)\n    assert follow(\"ffrff\") == (1, 4)\n\
+  \    assert follow(\"fblr\") == (0, 0)\n    print(\"Coding complete? Click 'Check'\
+  \ to earn cool rewards!\")\n"
+seconds_from_change: 9223372036854775807

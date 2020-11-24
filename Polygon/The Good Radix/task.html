@@ -1,0 +1,54 @@
+<p>
+    In mathematical numeral systems, the radix or base is the number of unique digits (including zero)
+    that a positional numeral system uses to represent numbers.
+    For example: in the decimal system, the radix is ten. This is because it has ten digits from 0 through 9.
+    In a system with a radix of 13, there would be 13 digits. For example:
+    a string of digits such as 398 denotes the decimal number <em>3 * 13^2 + 9 * 13^1 + 8 * 13^0</em>.
+    For the systems with a radix more than 10, we will use capital Latin symbols from A to Z, where A = 10, B = 11 ...
+</p>
+
+<p>
+    You are given some number <strong>n</strong> written as a string with the radix equal to <strong>k (1 &lt; k &lt; 37)</strong>.
+    We know that our number is divisible by <strong>(k - 1)</strong> without a remainder.
+    You should find the minimal possible <strong>k</strong>, if it exists, or return 0.
+</p>
+
+<p>
+    For example: n = "18". As we can see <strong>k</strong> should be greater than 8.<br>
+    If k == 9, then n = 17 in the decimal system and 17&nbsp;%&nbsp;8&nbsp;==&nbsp;1. The wrong radix.<br>
+    If k == 10, then n = 18 in the decimal system and 18&nbsp;%&nbsp;9&nbsp;==&nbsp;0. We found the answer.<br>
+
+</p>
+<p>
+    <strong>Input: </strong> A number as a string.
+</p>
+
+<p>
+    <strong>Output: </strong> The radix k as an integer.
+</p>
+
+
+<pre class="brush: python">
+checkio(u"18") == 10
+checkio(u"1010101011") == 2
+checkio(u"222") == 3
+checkio(u"A23B") == 14
+checkio(u"IDDQD") == 0
+</pre>
+
+
+<p>
+    <strong>How it is used:</strong>
+    Let's familiarize with numeral systems more careful and examine the radix.
+    Many devices are built to accept numbers in decimal representation and display results in decimal. Often such devices convert from decimal to some internal radix on input, do all internal operations in that radix, and then convert the results from the internal radix to decimal on output. Such devices could in principle use any radix internally.
+    The people who design such computing devices sometimes wonder what would be the "best" radix to use internally -- radix economy.
+
+    The octal, hexadecimal and base-64 systems are often used in computing because of their ease as shorthand for binary.
+
+</p>
+<p>
+    <strong>Precondition:</strong> A number conforms regexp "[A-Z0-9]{1, 10}".<br>
+    0 &lt; number
+</p>
+
+<p><a href="https://py.checkio.org/en/mission/good-radix">See the task on CheckiO</a></p>

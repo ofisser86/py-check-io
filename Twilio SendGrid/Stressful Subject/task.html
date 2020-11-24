@@ -1,0 +1,36 @@
+<div class="for_info_only" style="text-align: center">
+    <img src="https://py-static.checkio.org/media/task/media/59ce692dcb1e480abc9cf269cab468ec/title.png" style="max-height: 296px">
+</div>
+
+<p class="for_info_only"><i>Sofia has had a very stressful month and decided to take a vacation for a week. To avoid any stress during her vacation she wants to forward emails with a stressful subject line to Stephen.</i></p>
+
+<p>
+    The function should recognise if a subject line is stressful. A stressful subject line means that all letters are in uppercase, and/or ends by at least 3 exclamation marks, and/or contains at least one of the following “red” words: "help", "asap", "urgent". Any of those "red" words can be spelled in different ways - "HELP", "help", "HeLp", "H!E!L!P!", "H-E-L-P", even in a very loooong way "HHHEEEEEEEEELLP," they just can't have any other letters interspersed between them.
+</p>
+
+<p>
+    <strong>Input: </strong> Subject line as a string.
+</p>
+
+<p>
+    <strong>Output: </strong> Boolean. 
+</p>
+
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+<pre class="brush: python">
+is_stressful("Hi") == False
+is_stressful("I neeed HELP") == True
+</pre>
+</div>
+
+<p>
+    <strong>Precondition:</strong>
+    <i>Subject can be up to 100 letters</i>
+</p>
+
+<p><a href="https://py.checkio.org/en/mission/stressful-subject">See the task on CheckiO</a></p>

@@ -1,0 +1,48 @@
+<p>
+    Sometimes damaged nodes are unrecoverable. In that case, people that were connected to the crushed node must migrate to another district while administration attempts to fix the node.</p>
+ 
+<p>But if a crushed node disconnects multiple districts from one another, then the network splits into two sub-networks and every sub-network should have their own Mayor. And Mayors must use pigeons for mailing between each other. In that case, when the network is split you don’t need hundreds of pigeons.</p>
+ 
+<p>Your mission is to figure out how many Mayors you need to control the entire city when some nodes are crushed. In other words, you need to figure out how many sub-networks will be formed after some nodes are crush and not recovered.</p>
+</p>
+
+
+<div class="for_info_only" style="text-align: center">
+    <img src="https://py-static.checkio.org/media/task/media/5d8b680383864c0c8cb10aa5afc70bca/example.png" style="max-height: 302px">
+</div>
+
+<p>
+    <strong>Input: </strong> Two arguments: the network structure (as a list of connections between the nodes) and the list of crashed nodes.
+</p>
+
+<p>
+    <strong>Output: </strong> Int. The amount of sub-networks formed after some nodes were crushed.
+</p>
+
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+<pre class="brush: python">
+subnetworks([
+        ['A', 'B'],
+        ['B', 'C'],
+        ['C', 'D']
+    ], ['B']) == 2
+subnetworks([
+        ['A', 'B'],
+        ['A', 'C'],
+        ['A', 'D'],
+        ['D', 'F']
+    ], ['A']) == 3
+subnetworks([
+        ['A', 'B'],
+        ['B', 'C'],
+        ['C', 'D']
+    ], ['C', 'D']) == 1
+</pre>
+</div>
+
+<p><a href="https://py.checkio.org/en/mission/node-subnetworks">See the task on CheckiO</a></p>

@@ -1,0 +1,49 @@
+<img class="for_info_only half" src="https://py-static.checkio.org/media/task/media/f5e683ebbd044f02918acb6b796d3e79/title.png" style="float:left;max-height: 400px">
+<p>
+    Nicola likes to categorize all sorts of things.
+    He categorized a series of numbers and as the result of his efforts,
+    a simple sequence of numbers became a deeply-nested list.
+    Sophia and Stephan don't really understand his organization and need to figure out what it all means.
+    They need your help to understand Nikolas crazy list.
+</p>
+<p>
+    There is a list which contains integers or
+    other nested lists which may contain yet more lists and integers which then… you get the idea.
+    You should put all of the integer values into one flat list.
+    The order should be as it was in the original list with string representation from left to right.<br>
+In this mission you should use the 'yield' to make your function a generator.
+</p>
+
+<p>
+    We need to hide this program from Nikola by keeping it small and easy to hide.
+    Because of this, <strong>your code should be shorter than 140 characters (with whitespaces)</strong>.
+</p>
+
+<p><strong>Input data:</strong> A nested list with integers.</p>
+
+<p><strong>Output data:</strong> The one-dimensional list with integers.</p>
+
+<p><strong>Example:<br/></strong></p>
+
+
+<pre class="brush: python">flat_list([1, 2, 3]) == [1, 2, 3]
+flat_list([1, [2, 2, 2], 4]) == [1, 2, 2, 2, 4]
+flat_list([[[2]], [4, [5, 6, [6], 6, 6, 6], 7]]) == [2, 4, 5, 6, 6, 6, 6, 6, 7]
+flat_list([-1, [1, [-2], 1], -1]) == [-1, 1, -2, 1, -1]
+</pre>
+
+
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    This concept is useful for parsing and analyzing files with complex structures and
+    the task challenges your creativity in writing short code.
+</p>
+
+<p>
+    <strong>Precondition: </strong> 0 &le; |array| &le; 100<br>
+    &forall; x ∈ array : -2<sup>32</sup> < x < 2<sup>32</sup> or x is a list<br>
+    depth < 10
+</p>
+
+<p><a href="https://py.checkio.org/en/mission/flatten-a-list-generator-version">See the task on CheckiO</a></p>

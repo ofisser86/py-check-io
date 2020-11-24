@@ -1,0 +1,33 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def correct_sentence(text: str) -> str:\n    \"\"\"\n        returns a corrected\
+    \ sentence which starts with a capital letter\n        and ends with a dot.\n\
+    \    \"\"\"\n    # your code here\n    new_text = text.split()\n    new_text[0]\
+    \ = new_text[0].capitalize()\n    if not new_text[-1].endswith('.'):\n       \
+    \ new_text[-1] = new_text[-1] + '.'\n    return ' '.join(new_text)\n\n\n\nif __name__\
+    \ == '__main__':\n    print(\"Example:\")\n    print(correct_sentence(\"welcome\
+    \ to New York\"))\n    \n    # These \"asserts\" are used for self-checking and\
+    \ not for an auto-testing\n    assert correct_sentence(\"greetings, friends\"\
+    ) == \"Greetings, friends.\"\n    assert correct_sentence(\"Greetings, friends\"\
+    ) == \"Greetings, friends.\"\n    assert correct_sentence(\"Greetings, friends.\"\
+    ) == \"Greetings, friends.\"\n    assert correct_sentence(\"hi\") == \"Hi.\"\n\
+    \    assert correct_sentence(\"welcome to New York\") == \"Welcome to New York.\"\
+    \n    \n    print(\"Coding complete? Click 'Check' to earn cool rewards!\")\n"
+  learner_created: false
+status: Solved
+code: "def correct_sentence(text: str) -> str:\n    \"\"\"\n        returns a corrected\
+  \ sentence which starts with a capital letter\n        and ends with a dot.\n  \
+  \  \"\"\"\n    # your code here\n    new_text = text.split()\n    new_text[0] =\
+  \ new_text[0].capitalize()\n    if not new_text[-1].endswith('.'):\n        new_text[-1]\
+  \ = new_text[-1] + '.'\n    return ' '.join(new_text)\n\n\n\nif __name__ == '__main__':\n\
+  \    print(\"Example:\")\n    print(correct_sentence(\"welcome to New York\"))\n\
+  \    \n    # These \"asserts\" are used for self-checking and not for an auto-testing\n\
+  \    assert correct_sentence(\"greetings, friends\") == \"Greetings, friends.\"\n\
+  \    assert correct_sentence(\"Greetings, friends\") == \"Greetings, friends.\"\n\
+  \    assert correct_sentence(\"Greetings, friends.\") == \"Greetings, friends.\"\
+  \n    assert correct_sentence(\"hi\") == \"Hi.\"\n    assert correct_sentence(\"\
+  welcome to New York\") == \"Welcome to New York.\"\n    \n    print(\"Coding complete?\
+  \ Click 'Check' to earn cool rewards!\")\n"
+seconds_from_change: 1636152

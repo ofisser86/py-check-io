@@ -1,0 +1,21 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def is_all_upper(text: str) -> bool:\r\n    # your code here\r\n    return\
+    \ False\r\n\r\n\r\nif __name__ == '__main__':\r\n    print(\"Example:\")\r\n \
+    \   print(is_all_upper('ALL UPPER'))\r\n\r\n    # These \"asserts\" are used for\
+    \ self-checking and not for an auto-testing\r\n    assert is_all_upper('ALL UPPER')\
+    \ == True\r\n    assert is_all_upper('all lower') == False\r\n    assert is_all_upper('mixed\
+    \ UPPER and lower') == False\r\n    assert is_all_upper('') == False\r\n    print(\"\
+    Coding complete? Click 'Check' to earn cool rewards!\")"
+  learner_created: false
+status: Unchecked
+code: "def is_all_upper(text: str) -> bool:\r\n    # your code here\r\n    return\
+  \ False\r\n\r\n\r\nif __name__ == '__main__':\r\n    print(\"Example:\")\r\n   \
+  \ print(is_all_upper('ALL UPPER'))\r\n\r\n    # These \"asserts\" are used for self-checking\
+  \ and not for an auto-testing\r\n    assert is_all_upper('ALL UPPER') == True\r\n\
+  \    assert is_all_upper('all lower') == False\r\n    assert is_all_upper('mixed\
+  \ UPPER and lower') == False\r\n    assert is_all_upper('') == False\r\n    print(\"\
+  Coding complete? Click 'Check' to earn cool rewards!\")"
+seconds_from_change: 9223372036854775807

@@ -1,0 +1,83 @@
+<p>
+    In mathematics and mathematical logic,
+    <a href="http://en.wikipedia.org/wiki/Boolean_algebra#Basic_operations">Boolean algebra</a>
+    is a sub-area of algebra in which the values of the variables are true or false, typically denoted with 1 or 0
+    respectively. Instead of elementary algebra where the values of the variables are numbers and the main operations
+    are addition and multiplication, the main operations of Boolean algebra are the conjunction (denoted ∧), the
+    disjunction (denoted ∨) and the negation (denoted ¬).
+</p>
+
+<p>
+    In this mission you should implement some boolean operations:<br>
+    - <strong>"conjunction"</strong>
+    denoted x&nbsp;∧&nbsp;y, satisfies x&nbsp;∧&nbsp;y = 1 if x = y = 1 and x&nbsp;∧&nbsp;y = 0 otherwise.<br>
+    - <strong>"disjunction"</strong>
+    denoted x&nbsp;∨&nbsp;y, satisfies x&nbsp;∨&nbsp;y = 0 if x = y = 0 and x&nbsp;∨&nbsp;y = 1 otherwise.<br>
+    - <strong>"implication"</strong> (material implication)
+    denoted x&rarr;y and can be described as ¬&nbsp;x&nbsp;∨&nbsp;y.
+    If x is true then the value of x → y is taken to be that of y.
+    But if x is false then the value of y can be ignored; however the operation must return
+    some truth value and there are only two choices, so the return value is the one that entails less, namely true.<br>
+    - <strong>"exclusive"</strong> (exclusive or)
+    denoted x&nbsp;⊕&nbsp;y and can be described as (x&nbsp;∨&nbsp;y)∧&nbsp;¬&nbsp;(x&nbsp;∧&nbsp;y).
+    It excludes the possibility of both x and y. Defined in terms of arithmetic it is addition mod 2 where 1 + 1 =
+    0.<br>
+    - <strong>"equivalence"</strong>
+    denoted x&nbsp;≡&nbsp;y and can be described as ¬&nbsp;(x&nbsp;⊕&nbsp;y).
+    It's true just when x and y have the same value.<br>
+
+</p>
+
+<p>
+    Here you can see the truth table for these operations:
+</p>
+<div style="text-align: center;">
+<pre>
+ x | y | x∧y | x∨y | x→y | x⊕y | x≡y |
+--------------------------------------
+ 0 | 0 |  0  |  0  |  1  |  0  |  1  |
+ 1 | 0 |  0  |  1  |  0  |  1  |  0  |
+ 0 | 1 |  0  |  1  |  1  |  1  |  0  |
+ 1 | 1 |  1  |  1  |  1  |  0  |  1  |
+--------------------------------------
+</pre>
+</div>
+
+<p>
+    You are given two boolean values <strong>x</strong> and <strong>y</strong> as 1 or 0 and you are given an operation
+    name as described earlier. You should calculate the value and return it as 1 or 0.
+</p>
+<p>
+    <strong>Input: </strong> Three arguments. X and Y as 0 or 1. An operation name as a string.
+</p>
+
+<p>
+    <strong>Output: </strong> The result as 1 or 0.
+</p>
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+    
+<pre class="brush: python">
+boolean(1, 0, "conjunction") == 0
+boolean(0, 1, "exclusive") == 1
+</pre>
+
+</div>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    Here you will learn how to work with boolean values and operators. You even get to think about numbers as booleans.
+
+</p>
+
+<p>
+    <strong>Precondition:</strong>
+    x in (0, 1)<br>
+    y in (0, 1)<br>
+    operation in ("conjunction", "disjunction", "implication", "exclusive", "equivalence")
+</p>
+<p><a href="https://py.checkio.org/en/mission/boolean-algebra">See the task on CheckiO</a></p>

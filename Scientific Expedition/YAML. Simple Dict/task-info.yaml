@@ -1,0 +1,23 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def yaml(a):\n    # your code here\n    if len(a) > 1:\n        print({k.split(':')[0]:\
+    \ k.split(':')[1] for k in a.split(',') })\n    \n    return 0\n\n\nif __name__\
+    \ == '__main__':\n    print(\"Example:\")\n    print(yaml(\"\"\"name: Alex Fox,\n\
+    age: 12\n\nclass: 12b\"\"\"))\n\n    # These \"asserts\" are used for self-checking\
+    \ and not for an auto-testing\n    assert yaml(\"\"\"name: Alex\nage: 12\"\"\"\
+    ) == {'age': 12, 'name': 'Alex'}\n    assert yaml(\"\"\"name: Alex Fox\nage: 12\n\
+    \nclass: 12b\"\"\") == {'age': 12,\n 'class': '12b',\n 'name': 'Alex Fox'}\n \
+    \   print(\"Coding complete? Click 'Check' to earn cool rewards!\")\n"
+  learner_created: false
+status: Unchecked
+code: "def yaml(a):\n    # your code here\n    if len(a) > 1:\n        print({k.split(':')[0]:\
+  \ k.split(':')[1] for k in a.split(',') })\n    \n    return 0\n\n\nif __name__\
+  \ == '__main__':\n    print(\"Example:\")\n    print(yaml(\"\"\"name: Alex Fox,\n\
+  age: 12\n\nclass: 12b\"\"\"))\n\n    # These \"asserts\" are used for self-checking\
+  \ and not for an auto-testing\n    assert yaml(\"\"\"name: Alex\nage: 12\"\"\")\
+  \ == {'age': 12, 'name': 'Alex'}\n    assert yaml(\"\"\"name: Alex Fox\nage: 12\n\
+  \nclass: 12b\"\"\") == {'age': 12,\n 'class': '12b',\n 'name': 'Alex Fox'}\n   \
+  \ print(\"Coding complete? Click 'Check' to earn cool rewards!\")\n"
+seconds_from_change: 5315

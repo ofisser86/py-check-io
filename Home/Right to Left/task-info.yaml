@@ -1,0 +1,33 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def left_join(phrases: tuple) -> str:\n    \"\"\"\n        Join strings and\
+    \ replace \"right\" to \"left\"\n    \"\"\"\n    new_list = list(phrases)\n  \
+    \  for i in range(len(new_list)):\n        if 'right' in new_list[i]:\n      \
+    \      new_list[i] = new_list[i].replace('right', 'left')\n\n    return ','.join(new_list)\n\
+    \n\nif __name__ == '__main__':\n    print('Example:')\n    print(left_join(((\"\
+    left\", \"right\", \"left\", \"stop\"))))\n    \n    #These \"asserts\" using\
+    \ only for self-checking and not necessary for auto-testing\n    assert left_join((\"\
+    left\", \"right\", \"left\", \"stop\")) == \"left,left,left,stop\", \"All to left\"\
+    \n    assert left_join((\"bright aright\", \"ok\")) == \"bleft aleft,ok\", \"\
+    Bright Left\"\n    assert left_join((\"brightness wright\",)) == \"bleftness wleft\"\
+    , \"One phrase\"\n    assert left_join((\"enough\", \"jokes\")) == \"enough,jokes\"\
+    , \"Nothing to replace\"\n    print(\"Coding complete? Click 'Check' to review\
+    \ your tests and earn cool rewards!\")\n"
+  learner_created: false
+status: Solved
+code: "def left_join(phrases: tuple) -> str:\n    \"\"\"\n        Join strings and\
+  \ replace \"right\" to \"left\"\n    \"\"\"\n    new_list = list(phrases)\n    for\
+  \ i in range(len(new_list)):\n        if 'right' in new_list[i]:\n            new_list[i]\
+  \ = new_list[i].replace('right', 'left')\n\n    return ','.join(new_list)\n\n\n\
+  if __name__ == '__main__':\n    print('Example:')\n    print(left_join(((\"left\"\
+  , \"right\", \"left\", \"stop\"))))\n    \n    #These \"asserts\" using only for\
+  \ self-checking and not necessary for auto-testing\n    assert left_join((\"left\"\
+  , \"right\", \"left\", \"stop\")) == \"left,left,left,stop\", \"All to left\"\n\
+  \    assert left_join((\"bright aright\", \"ok\")) == \"bleft aleft,ok\", \"Bright\
+  \ Left\"\n    assert left_join((\"brightness wright\",)) == \"bleftness wleft\"\
+  , \"One phrase\"\n    assert left_join((\"enough\", \"jokes\")) == \"enough,jokes\"\
+  , \"Nothing to replace\"\n    print(\"Coding complete? Click 'Check' to review your\
+  \ tests and earn cool rewards!\")\n"
+seconds_from_change: 1307526

@@ -1,0 +1,888 @@
+<p>The <strong>Bit Message</strong> is a message that is hidden within the lines of an octet
+    stream and it is represented as a hexadecimal string which has maximum length
+    of 149 octets. The first 9 octets of the message contain the
+    <strong>header</strong> for the message and the rest comprise the
+    <strong>content</strong>. The header contains 1 type octet,
+    7 timestamp octets, and 1 message length octet.
+    The content contains a maximum of 140 octets and could be
+    packed with either 7 bit, 8 bit or 16 bit. 7 bit packed messages
+    have a length of 160 characters, 8 bit packed messages have
+    a length of 140 characters, and 16 bit packed messages will
+    only have a length of 70 characters.
+</p>
+<p>Here are some details on the structure of a bit message:</p>
+
+<p>
+<table cellspacing="0" cols="11" border="0">
+	<colgroup span="2" width="85"></colgroup>
+	<colgroup span="8" width="39"></colgroup>
+	<colgroup width="85"></colgroup>
+	<tbody>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td colspan="9" align="LEFT" ><strong>BIT MESSAGE FORMAT</strong></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="CENTER" ><b>Bit</b></td>
+		<td align="CENTER"  sdval="7" sdnum="1033;"><b>7</b></td>
+		<td align="CENTER"  sdval="6" sdnum="1033;"><b>6</b></td>
+		<td align="CENTER"  sdval="5" sdnum="1033;"><b>5</b></td>
+		<td align="CENTER"  sdval="4" sdnum="1033;"><b>4</b></td>
+		<td align="CENTER"  sdval="3" sdnum="1033;"><b>3</b></td>
+		<td align="CENTER"  sdval="2" sdnum="1033;"><b>2</b></td>
+		<td align="CENTER"  sdval="1" sdnum="1033;"><b>1</b></td>
+		<td align="CENTER"  sdval="0" sdnum="1033;"><b>0</b></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="CENTER" ><b>Octet-nth</b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td style="border-bottom: 1px dotted gray" rowspan="9" align="CENTER" valign="MIDDLE" >HEADER</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td align="LEFT" valign="MIDDLE" style="padding-left: 16px;"><font size="1">TYPE</font></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td align="LEFT" valign="MIDDLE" style="padding-left: 16px;"><font size="1">YEAR</font></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td align="LEFT" valign="MIDDLE" style="padding-left: 16px;"><font size="1">MONTH</font></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td align="LEFT" valign="MIDDLE" style="padding-left: 16px;"><font size="1">DAY</font></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td align="LEFT" valign="MIDDLE" style="padding-left: 16px;"><font size="1">HOUR</font></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td align="LEFT" valign="MIDDLE" style="padding-left: 16px;"><font size="1">MINUTE</font></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td align="LEFT" valign="MIDDLE" style="padding-left: 16px;"><font size="1">SECOND</font></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td align="LEFT" valign="MIDDLE" style="padding-left: 16px;"><font size="1">TIMEZONE</font></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border-bottom: 1px dotted gray; padding-left: 16px;" align="LEFT" valign="MIDDLE"><font size="1">LENGTH</font></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td rowspan="3" align="CENTER" valign="MIDDLE" >CONTENT</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td align="LEFT" valign="MIDDLE" style="padding-left: 16px;"><font size="1">Octet-1</font></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="MIDDLE" valign="MIDDLE" >...<br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" style="padding-left: 16px;"><font size="1">...<br></font></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" ><br></td>
+		<td align="LEFT" valign="MIDDLE" style="padding-left: 16px;"><font size="1">Octet-140</font></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td colspan="9" align="LEFT" ><strong>7-BIT PACKED MESSAGE</strong></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><b>Bit</b></td>
+		<td align="CENTER"  sdval="7" sdnum="1033;"><b>7</b></td>
+		<td align="CENTER"  sdval="6" sdnum="1033;"><b>6</b></td>
+		<td align="CENTER"  sdval="5" sdnum="1033;"><b>5</b></td>
+		<td align="CENTER"  sdval="4" sdnum="1033;"><b>4</b></td>
+		<td align="CENTER"  sdval="3" sdnum="1033;"><b>3</b></td>
+		<td align="CENTER"  sdval="2" sdnum="1033;"><b>2</b></td>
+		<td align="CENTER"  sdval="1" sdnum="1033;"><b>1</b></td>
+		<td align="CENTER"  sdval="0" sdnum="1033;"><b>0</b></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><b>Octet-nth</b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="21" align="LEFT" ><br></td>
+		<td align="CENTER" valign="MIDDLE"  sdval="1" sdnum="1033;">1</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE"  sdval="0" sdnum="1033;">0</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b6</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b5</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b4</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b3</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b2</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b1</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b0</td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td colspan="9" align="LEFT" ><strong>8-BIT PACKED MESSAGE</strong></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><b>Bit</b></td>
+		<td align="CENTER"  sdval="7" sdnum="1033;"><b>7</b></td>
+		<td align="CENTER"  sdval="6" sdnum="1033;"><b>6</b></td>
+		<td align="CENTER"  sdval="5" sdnum="1033;"><b>5</b></td>
+		<td align="CENTER"  sdval="4" sdnum="1033;"><b>4</b></td>
+		<td align="CENTER"  sdval="3" sdnum="1033;"><b>3</b></td>
+		<td align="CENTER"  sdval="2" sdnum="1033;"><b>2</b></td>
+		<td align="CENTER"  sdval="1" sdnum="1033;"><b>1</b></td>
+		<td align="CENTER"  sdval="0" sdnum="1033;"><b>0</b></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><b>Octet-nth</b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="21" align="LEFT" ><br></td>
+		<td align="CENTER" valign="MIDDLE"  sdval="1" sdnum="1033;">1</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE"  sdval="0" sdnum="1033;">b7</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b6</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b5</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b4</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b3</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b2</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b1</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b0</td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td colspan="9" align="LEFT" ><strong>16-BIT PACKED MESSAGE</strong></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><b>Bit</b></td>
+		<td align="CENTER"  sdval="7" sdnum="1033;"><b>7</b></td>
+		<td align="CENTER"  sdval="6" sdnum="1033;"><b>6</b></td>
+		<td align="CENTER"  sdval="5" sdnum="1033;"><b>5</b></td>
+		<td align="CENTER"  sdval="4" sdnum="1033;"><b>4</b></td>
+		<td align="CENTER"  sdval="3" sdnum="1033;"><b>3</b></td>
+		<td align="CENTER"  sdval="2" sdnum="1033;"><b>2</b></td>
+		<td align="CENTER"  sdval="1" sdnum="1033;"><b>1</b></td>
+		<td align="CENTER"  sdval="0" sdnum="1033;"><b>0</b></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><b>Octet-nth</b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><b><br></b></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="21" align="LEFT" ><br></td>
+		<td align="CENTER" valign="MIDDLE"  sdval="1" sdnum="1033;">1</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE"  sdval="0" sdnum="1033;">b7</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b6</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b5</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b4</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b3</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b2</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b1</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b0</td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="21" align="LEFT" ><br></td>
+		<td align="CENTER" valign="MIDDLE"  sdval="1" sdnum="1033;">2</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE"  sdval="0" sdnum="1033;">b15</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b14</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b13</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b12</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b11</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b10</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b9</td>
+		<td style="border: 1px solid gray; " align="CENTER" valign="MIDDLE" >b8</td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+		<td align="LEFT" ><br></td>
+	</tr>
+
+</tbody></table>
+</p>
+
+<p>
+<table cellspacing="0" cols="8" border="0" style="font-size: 13px">
+	<colgroup width="100"></colgroup>
+	<colgroup width="72"></colgroup>
+	<colgroup width="75"></colgroup>
+	<colgroup width="58"></colgroup>
+	<colgroup span="4" width="85"></colgroup>
+	<tbody><tr>
+		<td style="border-top: 1px solid gray; border-bottom: 1px solid gray; border-right: 1px solid gray" height="17" align="CENTER"><b>HEADER</b></td>
+		<td style="border-top: 1px solid gray; border-bottom: 1px solid gray;" align="CENTER"><b># OCTET</b></td>
+		<td style="border-top: 1px solid gray; border-bottom: 1px solid gray; border-left: 1px solid gray" colspan="5" align="CENTER" valign="MIDDLE"><b>DESCRIPTION</b></td>
+		<td style="border-top: 1px solid gray; border-bottom: 1px solid gray; border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="border-right: 1px solid gray" height="17" align="CENTER"><br></td>
+		<td style=" " align="CENTER">        </td>
+		<td style=" border-left: 1px solid gray" align="LEFT"><br></td>
+		<td style="" align="LEFT"><br></td>
+		<td style="" align="LEFT"><br></td>
+		<td style="" align="LEFT"><br></td>
+		<td style="" align="LEFT"><br></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="border-right: 1px solid gray" rowspan="15" height="256" align="CENTER" valign="MIDDLE">TYPE</td>
+		<td style="" align="CENTER" sdval="1" sdnum="1033;">1</td>
+		<td style="border-left: 1px solid gray; padding-left: 16px;" colspan="5" align="LEFT" valign="MIDDLE">contains specific flag for specific format identifier</td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray" align="LEFT" valign="MIDDLE"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray; padding-left: 16px;" align="LEFT" valign="MIDDLE">DETAIL</td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray;padding-left: 16px;" align="LEFT">Bit 0-1 :</td>
+		<td colspan="4" align="LEFT" valign="MIDDLE"><i>reserved message class meaning</i></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray; padding-left: 16px;" align="LEFT">Bit 2-3 :</td>
+		<td colspan="4" align="LEFT" valign="MIDDLE"><i>message encoding</i></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray;padding-left: 16px;" align="LEFT"><br></td>
+		<td align="LEFT">Bit 3</td>
+		<td align="LEFT">Bit 2</td>
+		<td align="LEFT">Pack</td>
+		<td align="LEFT"><br></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray" align="LEFT"><br></td>
+		<td align="LEFT" sdval="0" sdnum="1033;"><i>0</i></td>
+		<td align="LEFT" sdval="0" sdnum="1033;"><i>0</i></td>
+		<td align="LEFT"><i>7 bit</i></td>
+		<td align="LEFT"><br></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray" align="LEFT"><br></td>
+		<td align="LEFT" sdval="0" sdnum="1033;"><i>0</i></td>
+		<td align="LEFT" sdval="1" sdnum="1033;"><i>1</i></td>
+		<td align="LEFT"><i>8 bit</i></td>
+		<td align="LEFT"><br></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray" align="LEFT"><br></td>
+		<td align="LEFT" sdval="1" sdnum="1033;"><i>1</i></td>
+		<td align="LEFT" sdval="0" sdnum="1033;"><i>0</i></td>
+		<td align="LEFT"><i>16 bit</i></td>
+		<td align="LEFT"><br></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray" align="LEFT"><br></td>
+		<td align="LEFT" sdval="1" sdnum="1033;"><i>1</i></td>
+		<td align="LEFT" sdval="1" sdnum="1033;"><i>1</i></td>
+		<td align="LEFT"><i>reserved</i></td>
+		<td align="LEFT"><br></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray" align="LEFT">                         </td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray;padding-left: 16px;" align="LEFT">Bit 4   :</td>
+		<td colspan="4" align="LEFT" valign="MIDDLE"><i>reserved flag message class meaning</i></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><i><br></i></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray;padding-left: 16px;" align="LEFT">Bit 5   :</td>
+		<td style="border-right: 1px solid gray" colspan="5" align="LEFT" valign="MIDDLE"><i>reserved message is compressed or uncompressed</i></td>
+		</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray;padding-left: 16px;" align="LEFT">Bit 6-7 :</td>
+		<td colspan="4" align="LEFT" valign="MIDDLE"><i>reserved general data coding</i></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><i><br></i></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray" align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="border-top: 1px solid gray; border-right: 1px solid gray" height="17" align="CENTER"><br></td>
+		<td style="border-top: 1px solid gray; " align="CENTER">        </td>
+		<td style="border-top: 1px solid gray; border-left: 1px solid gray" align="LEFT"><br></td>
+		<td style="border-top: 1px solid gray" align="LEFT"><br></td>
+		<td style="border-top: 1px solid gray" align="LEFT"><br></td>
+		<td style="border-top: 1px solid gray" align="LEFT"><br></td>
+		<td style="border-top: 1px solid gray" align="LEFT"><br></td>
+		<td style="border-top: 1px solid gray; border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="border-right: 1px solid gray" rowspan="16" height="273" align="CENTER" valign="MIDDLE">TIMESTAMP</td>
+		<td style="" align="CENTER" sdval="7" sdnum="1033;">7</td>
+		<td style="border-left: 1px solid gray; border-right: 1px solid gray; padding-left: 16px;" colspan="6" align="LEFT" valign="MIDDLE">contains specific <strong>swapped nibbles</strong> for specific format identifier</td>
+		</tr>
+	<tr>
+		<td style="" align="CENTER">            </td>
+		<td style="border-left: 1px solid gray" align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray;padding-left: 16px;" align="LEFT">DETAIL</td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray;padding-left: 16px;" align="LEFT">Octet 1</td>
+		<td colspan="4" align="LEFT">YEAR<span style="position: absolute; left: 50%;">e.g. 10 for 2001</span></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray;padding-left: 16px;" align="LEFT">Octet 2</td>
+		<td colspan="4" align="LEFT">MONTH<span style="position: absolute; left: 50%;">e.g. 10 for Jan</span></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray;padding-left: 16px;" align="LEFT">Octet 3</td>
+		<td colspan="4" align="LEFT">DAY<span style="position: absolute; left: 50%;">e.g. 10 for 01</span></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray" align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray;padding-left: 16px;" align="LEFT">Octet 4</td>
+		<td colspan="4" align="LEFT">HOUR<span style="position: absolute; left: 50%;">e.g. 10 for 01</span></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray;padding-left: 16px;" align="LEFT">Octet 5</td>
+		<td colspan="4"  align="LEFT">MINUTE<span style="position: absolute; left: 50%;">e.g. 10 for 01</span></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray;padding-left: 16px;" align="LEFT">Octet 6</td>
+		<td colspan="4" align="LEFT">SECOND<span style="position: absolute; left: 50%;">e.g. 10 for 01</span></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray" align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray;padding-left: 16px;" align="LEFT">Octet 7</td>
+		<td colspan="4" align="LEFT">TIMEZONE<span style="position: absolute; left: 50%;">e.g. 80 for 08 x 15 / 60 = +2</span></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray" align="LEFT"><br></td>
+		<td style="border-bottom: 1px solid gray; border-right: 1px solid gray" colspan="5" rowspan="5" align="LEFT" valign="MIDDLE">The Time Zone is GMT format, expressed in quarters of an hour. In the first of the two semi-octets, the first bit represents the algebraic sign of this difference (0 : positive, 1 : negative)</td>
+		</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray" align="LEFT"><br></td>
+		</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray" align="LEFT"><br></td>
+		</tr>
+	<tr>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray" align="LEFT"><br></td>
+		</tr>
+	<tr>
+		<td style="border-bottom: 1px solid gray; border-right: 1px solid gray" height="17" align="CENTER"><br></td>
+		<td style="border-bottom: 1px solid gray;" align="CENTER"><br></td>
+		<td style="border-bottom: 1px solid gray; border-left: 1px solid gray" align="LEFT"><br></td>
+		</tr>
+	<tr>
+		<td style="border-right: 1px solid gray" height="17" align="CENTER"><br></td>
+		<td style="" align="CENTER"><br></td>
+		<td style="border-left: 1px solid gray" align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="border-right: 1px solid gray;" height="17" align="CENTER">LENGTH</td>
+		<td style="" align="CENTER" sdval="1" sdnum="1033;">1</td>
+		<td style="border-left: 1px solid gray; border-right: 1px solid gray;padding-left: 16px;" colspan="6" align="LEFT" valign="MIDDLE">maximum characters allowed is 160, 140 or 70 characters depends on message packed format</td>
+		</tr>
+	<tr>
+		<td style="border-right: 1px solid gray" height="17" align="CENTER"><br></td>
+		<td style="" align="LEFT"><br></td>
+		<td style="border-left: 1px solid gray" align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td style="border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td style="border-bottom: 1px solid gray; border-right: 1px solid gray" height="17" align="CENTER"><br></td>
+		<td style="border-bottom: 1px solid gray;" align="CENTER">            </td>
+		<td style="border-bottom: 1px solid gray; border-left: 1px solid gray" align="LEFT"><br></td>
+		<td style="border-bottom: 1px solid gray" align="LEFT"><br></td>
+		<td style="border-bottom: 1px solid gray" align="LEFT"><br></td>
+		<td style="border-bottom: 1px solid gray" align="LEFT"><br></td>
+		<td style="border-bottom: 1px solid gray" align="LEFT"><br></td>
+		<td style="border-bottom: 1px solid gray; border-right: 1px solid gray" align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="CENTER"><br></td>
+		<td align="CENTER"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="CENTER"><br></td>
+		<td align="CENTER">        </td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+	</tr>
+	<tr>
+		<td height="17" align="CENTER"><br></td>
+		<td align="CENTER"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+		<td align="LEFT"><br></td>
+	</tr>
+</tbody></table>
+</p>
+
+
+<p><strong>Input data: </strong>A hexadecimal string that is a bit message (unicode).</p>
+<p><strong>Output data: </strong>A list containing the timestamp, length of message and the message itself. The message is unicode.</p>
+<div class="for_info_only">
+<p><strong>Example:</strong></p>
+
+<pre class="brush: python">assert(checkio('002080629173148007EDF27C1E3E9701') ==
+        ['26 Aug 2002 19:37:41 GMT +2', 7, 'message']), "First Test"
+
+assert(checkio('00317050201171820FD3323BDC0ED341C4303DEC3E8700') ==
+        ['05 Jul 2013 02:11:17 GMT +7', 15, u'Selamat Datang!']), "Second Test, 7 bit"
+
+assert(checkio('000130925161956915C8729E054A82C26D50DA0D7296EFA0EC5BBE06') ==
+        ['29 Mar 2010 15:16:59 GMT -4', 21, 'Hey, I am in New York']), "Third Test, negative timezone"
+
+assert(checkio('08071010101010611F04180441043A043B044E04470435043D043804350020043F043E04340442043204350440043604340430043504420020043F0440043004320438043B043E') ==
+        ['01 Jan 1970 01:01:01 GMT +4', 31, 'Исключение подтверждает правило']), "Fourth Test, simulate 32-bit signed integer real life problem"
+
+assert(checkio('088310913041804C23805E4E0D82E5805E4E4B002C805E4E4B4E0D82E5898B4E4B002C898B4E4B4E0D82E577E54E4B002C77E54E4B4E0D82E5884C4E4B002C5B7881F365BC884C4E4B800C6B6277E3 ') ==
+        ['19 Jan 2038 03:14:08 GMT -11', 35, '聞不若聞之,聞之不若見之,見之不若知之,知之不若行之,學至於行之而止矣']), "But, we pass Y2K38 problem"
+</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+
+</p>
+
+<p><a href="https://py.checkio.org/en/mission/bit-message">See the task on CheckiO</a></p>

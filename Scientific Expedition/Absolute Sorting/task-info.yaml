@@ -1,0 +1,34 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def checkio(numbers_array: tuple) -> list:\n    less_zero = []\n    for i\
+    \ in numbers_array:\n      if  i < 0:\n        less_zero.append(abs(i))\n    \n\
+    \    new_array = sorted([abs(i) for i in numbers_array])\n    for i in range(len(new_array)):\n\
+    \      if new_array[i] in less_zero:\n        new_array[i] *= -1 \n  \n    return\
+    \ new_array\n\n#These \"asserts\" using only for self-checking and not necessary\
+    \ for auto-testing\nif __name__ == '__main__':\n    print('Example:')\n    print(list(checkio((-20,\
+    \ -5, 10, 15))))\n\n    def check_it(array):\n        if not isinstance(array,\
+    \ (list, tuple)):\n            raise TypeError(\"The result should be a list or\
+    \ tuple.\")\n        return list(array)\n\n    assert check_it(checkio((-20, -5,\
+    \ 10, 15))) == [-5, 10, 15, -20], \"Example\"  # or (-5, 10, 15, -20)\n    assert\
+    \ check_it(checkio((1, 2, 3, 0))) == [0, 1, 2, 3], \"Positive numbers\"\n    assert\
+    \ check_it(checkio((-1, -2, -3, 0))) == [0, -1, -2, -3], \"Negative numbers\"\n\
+    \    print(\"Coding complete? Click 'Check' to review your tests and earn cool\
+    \ rewards!\")\n"
+  learner_created: false
+status: Solved
+code: "def checkio(numbers_array: tuple) -> list:\n    less_zero = []\n    for i in\
+  \ numbers_array:\n      if  i < 0:\n        less_zero.append(abs(i))\n    \n   \
+  \ new_array = sorted([abs(i) for i in numbers_array])\n    for i in range(len(new_array)):\n\
+  \      if new_array[i] in less_zero:\n        new_array[i] *= -1 \n  \n    return\
+  \ new_array\n\n#These \"asserts\" using only for self-checking and not necessary\
+  \ for auto-testing\nif __name__ == '__main__':\n    print('Example:')\n    print(list(checkio((-20,\
+  \ -5, 10, 15))))\n\n    def check_it(array):\n        if not isinstance(array, (list,\
+  \ tuple)):\n            raise TypeError(\"The result should be a list or tuple.\"\
+  )\n        return list(array)\n\n    assert check_it(checkio((-20, -5, 10, 15)))\
+  \ == [-5, 10, 15, -20], \"Example\"  # or (-5, 10, 15, -20)\n    assert check_it(checkio((1,\
+  \ 2, 3, 0))) == [0, 1, 2, 3], \"Positive numbers\"\n    assert check_it(checkio((-1,\
+  \ -2, -3, 0))) == [0, -1, -2, -3], \"Negative numbers\"\n    print(\"Coding complete?\
+  \ Click 'Check' to review your tests and earn cool rewards!\")\n"
+seconds_from_change: 1125125

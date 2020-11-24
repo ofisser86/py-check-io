@@ -1,0 +1,82 @@
+<div class="for_info_only" style="text-align: center">
+    <img src="https://py-static.checkio.org/media/task/media/65f32cbe77a54923b2607d69c89d4028/title.png" style="max-height: 337px">
+</div>
+
+<p>
+    Citizens of GridLand are sending emails to each other all the time. They send everything - what they just ate, a funny picture, questions or thoughts that are bothering them right now. All the citizens are happy because they have such a wonderful network that keeps them connected.</p>
+ 
+<p>The main goal of the Mayor is to control the city's happiness. The city's happiness is a sum of all citizens' happiness. And the happiness of each citizen is equal to the number of citizens (always including oneself) that one can send emails to.</p>
+ 
+<p>Because the city is growing, the citizens have decided that the Mayor needs an assistant to focus on the node protection.</p>
+ 
+<p>Your mission is to figure out what will be the first nodes to investigate and protect for the new assistant. Remember, you should choose the most important node in the network. If several nodes have the maximal importance, find all of them</p>
+
+
+<div class="for_info_only" style="text-align: center">
+    <img src="https://py-static.checkio.org/media/task/media/65f32cbe77a54923b2607d69c89d4028/example.png" style="max-height: 711px">
+</div>
+
+
+<p>
+    <strong>Input: </strong> Two arguments: the network structure (as a list of connections between the nodes), users on each node (as dict where keys are the node-names and values are the amounts of users).
+
+</p>
+
+<p>
+    <strong>Output: </strong> List of the most cruсial nodes.
+</p>
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+
+
+<pre class="brush: python">
+most_crucial([
+    ['A', 'B'],
+    ['B', 'C']
+],{
+    'A': 10,
+    'B': 10,
+    'C': 10
+}) == ['B']
+
+most_crucial([
+    ['A', 'B']
+],{
+    'A': 20,
+    'B': 10
+}) == ['A']
+
+most_crucial([
+    ['A', 'B'],
+    ['A', 'C'],
+    ['A', 'D'],
+    ['A', 'E']
+],{
+    'A': 0,
+    'B': 10,
+    'C': 10,
+    'D': 10,
+    'E': 10
+}) == ['A']
+
+most_crucial([
+    ['A', 'B'],
+    ['B', 'C'],
+    ['C', 'D']
+],{
+    'A': 10,
+    'B': 20,
+    'C': 10,
+    'D': 20
+}) == ['B']
+</pre>
+
+
+
+</div>
+
+
+<p><a href="https://py.checkio.org/en/mission/node-crucial">See the task on CheckiO</a></p>

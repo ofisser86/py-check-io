@@ -1,0 +1,46 @@
+<p>
+    In this task you you already have the solution. The problem is that it has a bug and you must try to find and fix it.
+    "<em>import</em>", "<em>exec</em>" and "<em>eval</em>" don't work for this task.
+</p>
+
+<p>
+    You are given a string that contains a list with integers or nested lists. 
+    The integers could have single plus or minus sign before them.
+    If the input string does not contain an array, then raise <strong>ValueError</strong>.
+    For an incorrectly formatted string -- raise <strong>ValueError</strong>. Elements of the array are separated by commas.
+</p>
+
+<p>
+    <strong>Input: </strong> A string.
+</p>
+
+<p>
+    <strong>Output: </strong> The list with nested lists or integers.
+</p>
+
+
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+    <pre class="brush: python">
+parse_array("[1, 2, 3]") == [1, 2, 3]
+parse_array("[[1], 2, 3]") == [[1], 2, 3]
+parse_array("[-3, [-2, 0], 10]") == [-3, [-2, 0], 10]
+</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    This task is designed for you to show off your bug hunting skills.
+    The parser code itself can be modified and improved to work as part of a larger more complex parsing system.
+</p>
+
+<p>
+    <strong>Precondition: </strong><br>
+    depth &lt; 5<br>
+    &forall; x ∈ data : -1000 < x < 1000<br>
+    </p>
+
+<p><a href="https://py.checkio.org/en/mission/parse-array">See the task on CheckiO</a></p>

@@ -1,0 +1,77 @@
+<p>
+  You are given a sequence of intervals, as tuples of ints where the tuples are sorted by
+  their first element in ascending order.<br>
+  Your task is to minimize the number of intervals by merging those that intersect or
+  by removing  those that are a part of other intervals.<br>
+In this mission you should use 'yield' to make your function a generator.
+</p>
+
+<p>
+  Since the range of values for the intervals is restricted to integers, you must also
+  merge those intervals between which no value can be found.
+</p>
+
+<p>
+  <strong>An example:</strong><br>
+  Let's say you've got these 5 intervals: <em>1..6, 3..5, 7..10, 9..12 and 14..16</em>.
+  <ol>
+    <li>
+      <em>1..6 and 3..5</em><br>
+      <em>3..5</em> fits into <em>1..6</em>, so <em>3..5</em> must disappear.
+    </li>
+    <li>
+      <em>1..6 and 7..10</em><br>
+      Even though the intervals don’t intersect, there isn’t an int type value between them, so they have to be merged with the new interval <em>1..10</em>.
+    </li>
+    <li>
+      <em>1..10 and 9..12</em><br>
+      These intervals do intersect, because <em>9 &lt; 10</em>,
+      so they have to be merged with the new interval <em>1..12</em>.
+    </li>
+    <li>
+      <em>1..12 and 14..16</em><br>
+      These two intervals don’t intersect, so they mustn’t be merged.
+    </li>
+  </ol>
+  <strong>So the intervals to be returned are:</strong><br>
+  <em>1..12 and 14..16</em>
+</p>
+
+<p>
+  <strong>Input:</strong>
+  A sequence of intervals as a  list of tuples of 2 ints, sorted by their first element.
+</p>
+
+<p>
+  <strong>Output:</strong>
+  The merged intervals as a list of tuples of 2 ints, sorted by their first element.
+</p>
+
+<div class="for_info_only">
+  <p>
+      <strong>Examples:</strong><br>
+  </p>
+  
+  <pre class="brush: python">
+merge_intervals([(1, 4), (2, 6), (8, 10), (12, 19)]) == [(1, 6), (8, 10), (12, 19)]
+merge_intervals([(1, 12), (2, 3), (4, 7)]) == [(1, 12)]
+merge_intervals([(1, 5), (6, 10), (10, 15), (17, 20)]) == [(1, 15), (17, 20)]</pre>
+  
+
+</div>
+
+<p>
+  <strong>Precondition:</strong><br>
+  
+  <ul>
+    <li>intervals == sorted(intervals, key=lambda x: x[0])  # sorted by 1st element of
+      the tuples
+    </li>
+    <li>interval[0] <= interval[1]</li>
+  </ul>
+  
+</p>
+
+
+
+<p><a href="https://py.checkio.org/en/mission/merge-intervals-generator-version">See the task on CheckiO</a></p>

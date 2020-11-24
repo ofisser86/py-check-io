@@ -1,0 +1,30 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def second_index(text: str, symbol: str) -> [int, None]:\n    \"\"\"\n  \
+    \      returns the second index of a symbol in a given text\n    \"\"\"\n    #\
+    \ your code here\n    if symbol not in text or text.count(symbol) == 1:\n    \
+    \    return None\n        \n    return text.find(symbol, text.find(symbol)+1,\
+    \ len(text))\n\n\nif __name__ == '__main__':\n    print('Example:')\n    print(second_index(\"\
+    sims\", \"s\"))\n\n    # These \"asserts\" are used for self-checking and not\
+    \ for an auto-testing\n    assert second_index(\"sims\", \"s\") == 3, \"First\"\
+    \n    assert second_index(\"find the river\", \"e\") == 12, \"Second\"\n    assert\
+    \ second_index(\"hi\", \" \") is None, \"Third\"\n    assert second_index(\"hi\
+    \ mayor\", \" \") is None, \"Fourth\"\n    assert second_index(\"hi mr Mayor\"\
+    , \" \") == 5, \"Fifth\"\n    print('You are awesome! All tests are done! Go Check\
+    \ it!')\n"
+  learner_created: false
+status: Solved
+code: "def second_index(text: str, symbol: str) -> [int, None]:\n    \"\"\"\n    \
+  \    returns the second index of a symbol in a given text\n    \"\"\"\n    # your\
+  \ code here\n    if symbol not in text or text.count(symbol) == 1:\n        return\
+  \ None\n        \n    return text.find(symbol, text.find(symbol)+1, len(text))\n\
+  \n\nif __name__ == '__main__':\n    print('Example:')\n    print(second_index(\"\
+  sims\", \"s\"))\n\n    # These \"asserts\" are used for self-checking and not for\
+  \ an auto-testing\n    assert second_index(\"sims\", \"s\") == 3, \"First\"\n  \
+  \  assert second_index(\"find the river\", \"e\") == 12, \"Second\"\n    assert\
+  \ second_index(\"hi\", \" \") is None, \"Third\"\n    assert second_index(\"hi mayor\"\
+  , \" \") is None, \"Fourth\"\n    assert second_index(\"hi mr Mayor\", \" \") ==\
+  \ 5, \"Fifth\"\n    print('You are awesome! All tests are done! Go Check it!')\n"
+seconds_from_change: 24093759

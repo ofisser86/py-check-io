@@ -1,0 +1,51 @@
+<img class="for_info_only half" src="https://py-static.checkio.org/media/task/media/304efc4de77a42929f7f3173c0ea279d/title.png" style="float:left;max-height: 400px">
+<p>
+    Nicola likes to categorize all sorts of things.
+    He categorized a series of numbers and as the result of his efforts,
+    a simple sequence of numbers became a deeply-nested list.
+    Sophia and Stephan don't really understand his organization and need to figure out what it all means.
+    They need your help to understand Nikolas crazy list.
+</p>
+<p>
+    There is a list iterator which contains integers or
+    other nested lists iterators which may contain yet more lists iterators and integers which then… you get the idea.
+    You should put all of the integer values into one flat list.
+    The order should be as it was in the original list with string representation from left to right.<br>
+After that you have to create an iterator object which is linked to this list.
+</p>
+
+<p>
+    We need to hide this program from Nikola by keeping it small.
+    Because of this, <strong>your code should be shorter than 140 characters (with whitespaces)</strong>.
+</p>
+
+<p><strong>Input data:</strong> A nested list iterator with integers and other iterators.</p>
+
+<p><strong>Output data:</strong> An iterator object linked to the one-dimensional list with integers.</p>
+
+<p><strong>Example:<br/></strong></p>
+
+<pre class="brush: python">list(flat_list(iter([1, 2, 3]))) == [1, 2, 3]
+list(flat_list(iter([1, iter([2, 2, 2]), 4]))) == [
+                     1, 2, 2, 2, 4]
+list(flat_list(iter([iter([2]), iter([4, iter([5, 6, iter([6]), 6, 6, 6]), 7])]))) == [
+                     2, 4, 5, 6, 6, 6, 6, 6, 7]
+list(flat_list(iter([-1, iter([1, iter([-2]), 1]), -1]))) == [
+                     -1, 1, -2, 1, -1]
+</pre>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    This concept is useful for parsing and analyzing files with complex structures and
+    task challenges that are checking your creativity in writing short code.
+</p>
+
+<p>
+    <strong>Precondition: </strong> 0 &le; |array| &le; 100<br>
+    &forall; x ∈ array : -2<sup>32</sup> < x < 2<sup>32</sup> or x is a list<br>
+    depth < 10
+</p>
+
+
+
+<p><a href="https://py.checkio.org/en/mission/flatten-a-list-iterator-version">See the task on CheckiO</a></p>

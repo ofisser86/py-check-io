@@ -1,0 +1,27 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def split_list(items: list) -> list:\n    if not items:\n        return [[],\
+    \ []]\n    if len(items) % 2 == 0:\n        return [items[:len(items) // 2 ],\
+    \ items[len(items) // 2:]]\n    \n    return [items[:len(items) // 2 + 1], items[len(items)\
+    \ // 2 + 1:]]\n\n\nif __name__ == '__main__':\n    print(\"Example:\")\n    print(split_list([1,\
+    \ 2, 3, 4, 5, 6]))\n\n    # These \"asserts\" are used for self-checking and not\
+    \ for an auto-testing\n    assert split_list([1, 2, 3, 4, 5, 6]) == [[1, 2, 3],\
+    \ [4, 5, 6]]\n    assert split_list([1, 2, 3]) == [[1, 2], [3]]\n    assert split_list([1,\
+    \ 2, 3, 4, 5]) == [[1, 2, 3], [4, 5]]\n    assert split_list([1]) == [[1], []]\n\
+    \    assert split_list([]) == [[], []]\n    print(\"Coding complete? Click 'Check'\
+    \ to earn cool rewards!\")\n"
+  learner_created: false
+status: Solved
+code: "def split_list(items: list) -> list:\n    if not items:\n        return [[],\
+  \ []]\n    if len(items) % 2 == 0:\n        return [items[:len(items) // 2 ], items[len(items)\
+  \ // 2:]]\n    \n    return [items[:len(items) // 2 + 1], items[len(items) // 2\
+  \ + 1:]]\n\n\nif __name__ == '__main__':\n    print(\"Example:\")\n    print(split_list([1,\
+  \ 2, 3, 4, 5, 6]))\n\n    # These \"asserts\" are used for self-checking and not\
+  \ for an auto-testing\n    assert split_list([1, 2, 3, 4, 5, 6]) == [[1, 2, 3],\
+  \ [4, 5, 6]]\n    assert split_list([1, 2, 3]) == [[1, 2], [3]]\n    assert split_list([1,\
+  \ 2, 3, 4, 5]) == [[1, 2, 3], [4, 5]]\n    assert split_list([1]) == [[1], []]\n\
+  \    assert split_list([]) == [[], []]\n    print(\"Coding complete? Click 'Check'\
+  \ to earn cool rewards!\")\n"
+seconds_from_change: 1038588

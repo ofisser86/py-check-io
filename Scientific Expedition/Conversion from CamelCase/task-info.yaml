@@ -1,0 +1,23 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def from_camel_case(name):\r\n    #replace this for solution\r\n    return\
+    \ name\r\n\r\nif __name__ == '__main__':\r\n    print(\"Example:\")\r\n    print(from_camel_case(\"\
+    Name\"))\r\n\r\n    #These \"asserts\" using only for self-checking and not necessary\
+    \ for auto-testing\r\n    assert from_camel_case(\"MyFunctionName\") == \"my_function_name\"\
+    \r\n    assert from_camel_case(\"IPhone\") == \"i_phone\"\r\n    assert from_camel_case(\"\
+    ThisFunctionIsEmpty\") == \"this_function_is_empty\"\r\n    assert from_camel_case(\"\
+    Name\") == \"name\"\r\n    print(\"Coding complete? Click 'Check' to earn cool\
+    \ rewards!\")"
+  learner_created: false
+status: Unchecked
+code: "def from_camel_case(name):\r\n    #replace this for solution\r\n    return\
+  \ name\r\n\r\nif __name__ == '__main__':\r\n    print(\"Example:\")\r\n    print(from_camel_case(\"\
+  Name\"))\r\n\r\n    #These \"asserts\" using only for self-checking and not necessary\
+  \ for auto-testing\r\n    assert from_camel_case(\"MyFunctionName\") == \"my_function_name\"\
+  \r\n    assert from_camel_case(\"IPhone\") == \"i_phone\"\r\n    assert from_camel_case(\"\
+  ThisFunctionIsEmpty\") == \"this_function_is_empty\"\r\n    assert from_camel_case(\"\
+  Name\") == \"name\"\r\n    print(\"Coding complete? Click 'Check' to earn cool rewards!\"\
+  )"
+seconds_from_change: 9223372036854775807

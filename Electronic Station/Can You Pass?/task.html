@@ -1,0 +1,71 @@
+<p>
+    If you have solved the
+    <a href="http://www.checkio.org/mission/find-friends/share/3061fec1b35588e4bae8ad69db073aab/">
+        "How to find friends"</a>
+    mission, then you already know how to check for the existence of a path
+    in graphs. Let's try to add something more to that problem.
+</p>
+
+<p>
+    You are given a matrix (2D array) and the coordinates (row and column) of two cells with the same value. The matrix
+    consists of digits. You may move to neighbouring cells either horizontally or vertically provided the values of the
+    origin and destination cells are equal. You should determine if a path exists between two given cells.
+</p>
+
+<p>
+    A matrix is represented as a tuple of tuples with digits. Coordinates are represented as a tuple with two numbers:
+    row and column. The result should be any value which can be converted into a boolean. If a path exists, then return
+    True. Return False if there is none.
+</p>
+
+<p style="text-align: center">
+    <img src="https://py-static.checkio.org/media/task/media/c8d77120f3cb4374888fb221840087e8/can-jump-through.svg" alt="can-you-jump-through" style="max-width: 430px">
+</p>
+
+<p>
+    <strong>Input: </strong>
+    Three arguments. A matrix as a tuple of tuples with integers,
+    first and second cell coordinates as tuples of two integers.
+</p>
+
+<p><strong>Output: </strong>The existence of a path between two given cells
+    as a boolean or a value that can be converted to boolean.</p>
+
+<div class="for_info_only"><strong>Example:</strong>
+<pre class="brush: python">
+can_pass(((0, 0, 0, 0, 0, 0),
+          (0, 2, 2, 2, 3, 2),
+          (0, 2, 0, 0, 0, 2),
+          (0, 2, 0, 2, 0, 2),
+          (0, 2, 2, 2, 0, 2),
+          (0, 0, 0, 0, 0, 2),
+          (2, 2, 2, 2, 2, 2),),
+         (3, 2), (0, 5)) == True, 'First example'
+can_pass(((0, 0, 0, 0, 0, 0),
+          (0, 2, 2, 2, 3, 2),
+          (0, 2, 0, 0, 0, 2),
+          (0, 2, 0, 2, 0, 2),
+          (0, 2, 2, 2, 0, 2),
+          (0, 0, 0, 0, 0, 2),
+          (2, 2, 2, 2, 2, 2),),
+         (3, 3), (6, 0)) == False,
+</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    Sometimes we don't need the full pathfinding algorithms implementation and can use
+    simplified realisation of these algorithms.
+    It can be an useful skill to find a simple ways.
+</p>
+
+<p>
+    <strong>Precondition:</strong><br>
+    1 &lt; len(matrix) &le; 10<br>
+    all(1 &lt; len(row) &le; 10 for row in matrix)<br>
+    all(all(0 &le; x &lt; 10 for x in row) for row in matrix)<br>
+    matrix[first[0]][first[1]] == matrix[second[0]][second[1]]<br>
+    first != second
+</p>
+
+<p><a href="https://py.checkio.org/en/mission/can-pass">See the task on CheckiO</a></p>

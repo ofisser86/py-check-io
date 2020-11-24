@@ -1,0 +1,63 @@
+<div style="text-align: center">
+    <img src="https://py-static.checkio.org/media/task/media/f8e21f69c0264846a4345ac2b3c7abcf/title.png" style="max-height: 350px">
+</div>
+<p>
+    You are given a text, which contains different English letters and punctuation marks.
+    You should find the most frequent letter in the text. The letter returned must be in lowercase.<br>
+    During the search for the most wanted letter, casing doesn’t matter,
+    "A"&nbsp;==&nbsp;"a".
+    Make sure you don’t count in the punctuation marks, digits and whitespaces, just letters.
+</p>
+<p>
+    If you have <strong>two or more letters occurring the same number of times</strong>,
+    then return all of them as a list.
+    For example -- "Hello, Evan" should return ['e', 'l'].
+</p>
+
+
+<p>
+    <strong>Input: </strong> A text for analysis as a string.
+</p>
+
+<p>
+    <strong>Output: </strong> The list of the most frequent letters in lowercase.
+</p>
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+  
+  <pre class="brush: python">
+most_wanted("Hello World!") == ["l"]
+most_wanted("How do you do?") == ["o"]
+most_wanted("One") == ["o", "n", "e"]
+most_wanted("Oops!") == ["o"]
+most_wanted("AAaooo!!!!") == ["a", "o"]
+most_wanted("abe") == ["a", "b", "e"]</pre>
+  
+</div>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    For most decryption tasks you need to know the occurrence frequency of various letters in a section of text.
+    For example: we can easily crack a simple addition or substitution cipher if we know the frequency in which letters appear.
+    It’s pretty interesting stuff for language experts!
+</p>
+
+
+<p><strong>Precondition</strong>:<br>
+    A text contains only ASCII symbols.<br>
+    0 &lt; len(text) &le; 10<sup>5</sup>
+</p>
+
+<!--
+<p class="for_info_only">
+    <strong>How to use TryIt: </strong><br>
+    <iframe width="560" height="315" src="//www.youtube.com/embed/yJUA5qN898E" frameborder="0" allowfullscreen></iframe>
+</p>
+-->
+
+
+
+<p><a href="https://py.checkio.org/en/mission/most-wanted-letter-2">See the task on CheckiO</a></p>

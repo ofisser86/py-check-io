@@ -1,0 +1,21 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "from twilio.rest import Client\r\n\r\n# Your Account Sid and Auth Token from\
+    \ twilio.com/console\r\nACCOUNT_SID = 'your_acount_sid'\r\nAUTH_TOKEN = 'your_auth_token'\r\
+    \n\r\n\r\ndef send_message(sender, to, body):\r\n    \"\"\"\r\n        sends message\r\
+    \n    \"\"\"\r\n    # your code here\r\n\r\nif __name__ == '__main__':\r\n   \
+    \ # These \"asserts\" are used for self-checking and not for an auto-testing\r\
+    \n    send_message('whatsapp:+15017122661', 'whatsapp:+15017122662', 'Hi!')\r\n\
+    \    print(\"Coding complete? Click 'Check' to earn cool rewards!\")"
+  learner_created: false
+status: Unchecked
+code: "from twilio.rest import Client\r\n\r\n# Your Account Sid and Auth Token from\
+  \ twilio.com/console\r\nACCOUNT_SID = 'your_acount_sid'\r\nAUTH_TOKEN = 'your_auth_token'\r\
+  \n\r\n\r\ndef send_message(sender, to, body):\r\n    \"\"\"\r\n        sends message\r\
+  \n    \"\"\"\r\n    # your code here\r\n\r\nif __name__ == '__main__':\r\n    #\
+  \ These \"asserts\" are used for self-checking and not for an auto-testing\r\n \
+  \   send_message('whatsapp:+15017122661', 'whatsapp:+15017122662', 'Hi!')\r\n  \
+  \  print(\"Coding complete? Click 'Check' to earn cool rewards!\")"
+seconds_from_change: 9223372036854775807

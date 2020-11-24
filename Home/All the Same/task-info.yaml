@@ -1,0 +1,26 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "from typing import List, Any\n\ndef all_the_same(elements: List[Any]) ->\
+    \ bool:\n    # your code here\n    if len(elements) == 0:\n        return True\n\
+    \    check = elements[0]\n    \n    if elements.count(check) == len(elements):\n\
+    \        return True \n        \n    return False\n\n\nif __name__ == '__main__':\n\
+    \    print(\"Example:\")\n    print(all_the_same([1, 1, 1]))\n    \n    # These\
+    \ \"asserts\" are used for self-checking and not for an auto-testing\n    assert\
+    \ all_the_same([1, 1, 1]) == True\n    assert all_the_same([1, 2, 1]) == False\n\
+    \    assert all_the_same(['a', 'a', 'a']) == True\n    assert all_the_same([])\
+    \ == True\n    assert all_the_same([1]) == True\n    print(\"Coding complete?\
+    \ Click 'Check' to earn cool rewards!\")"
+  learner_created: false
+status: Solved
+code: "from typing import List, Any\n\ndef all_the_same(elements: List[Any]) -> bool:\n\
+  \    # your code here\n    if len(elements) == 0:\n        return True\n    check\
+  \ = elements[0]\n    \n    if elements.count(check) == len(elements):\n        return\
+  \ True \n        \n    return False\n\n\nif __name__ == '__main__':\n    print(\"\
+  Example:\")\n    print(all_the_same([1, 1, 1]))\n    \n    # These \"asserts\" are\
+  \ used for self-checking and not for an auto-testing\n    assert all_the_same([1,\
+  \ 1, 1]) == True\n    assert all_the_same([1, 2, 1]) == False\n    assert all_the_same(['a',\
+  \ 'a', 'a']) == True\n    assert all_the_same([]) == True\n    assert all_the_same([1])\
+  \ == True\n    print(\"Coding complete? Click 'Check' to earn cool rewards!\")"
+seconds_from_change: 1561429

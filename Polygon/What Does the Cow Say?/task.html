@@ -1,0 +1,160 @@
+<style>
+    ul.rules li {
+        margin-left: 20px;
+    }
+</style>
+<p>
+    <i>Lets cow say!</i><br/>
+</p>
+<p>
+    Our cow is young and can only say some of the words we teach it.
+    Not only does it talk, but this cow can turn into the famous Tux
+    (<a href="http://en.wikipedia.org/wiki/Cowsay">wiki/Cowsay</a>) if we ask it nicely.
+
+</p>
+
+<div>
+    You are given some text and your function should format it in the "cows" speech.
+    Let's examine the rules for this problem:
+    <ul class="rules">
+        <li>
+            The cow is always the same, only quote changes.
+        </li>
+        <li>
+            Multiple spaces in a row are replaced by one space.
+        </li>
+        <li>
+            The top border consists of underscore characters. It starts from a single space and ends before the border column.
+        </li>
+        <li>
+            Each line of the quote consists of these parts: quote border(1), space(1), line(1-39), space(1), quote border(1).
+        </li>
+        <li>
+            If line is less than 40 characters, it will fit into one string. The string is quoted in <strong>&lt;&gt;</strong>.
+        </li>
+        <li>
+            If the line is greater than or equal to 40 characters, it should be split by these rules:
+            <ul>
+                <li>
+                    Max line size is 39 chars. If any spaces are in the line,
+                    split it by the rightmost space (this space is removed from text) otherwise take the first 39 characters.
+                </li>
+                <li>
+                    After the split align all lines to same length by adding spaces at the end of each line.
+                <li>
+                <li>
+                    First line borders: <strong>/\</strong>
+                </li>
+                <li>
+                    Middle line borders: <strong>||</strong>
+                </li>
+                <li>
+                    Last line borders: <strong>\/</strong></li>
+            </ul>
+        </li>
+        <li>
+            The bottom border consists of the minus sign. Has same length as top.
+        </li>
+
+        <li>cowsay console program has strange behavior in certain cases, this cases will not be tested here.</li>
+    </ul>
+</div>
+
+<div>
+    <pre>
+     _________________________________
+    / Dog goes woof                   \
+    | Cat goes meow                   |
+    | Bird goes tweet                 |
+    | And mouse goes squeek           |
+    | Cow goes moo                    |
+    | Duck goes quack                 |
+    \ And the solution will go to you /
+     ---------------------------------
+            \   ^__^
+             \  (oo)\_______
+                (__)\       )\/\
+                    ||----w |
+                    ||     ||
+    </pre>
+    <strong>What does the cow say?</strong>
+</div>
+
+<br>
+<p>
+    <strong>Input: </strong> Text as a string.
+</p>
+
+<p>
+    <strong>Output: </strong> The result for the console as a string.
+</p>
+
+<p>
+    <strong>Hint:</strong> Read python docs (<a href="http://docs.python.org/2/library/string.html">2.7</a>,
+    <a href="http://docs.python.org/3/library/stdtypes.html#string-methods">3.3</a>)
+    about formatting styles (str.format and %).
+    Notice for <strong>r</strong> before the string. It is a raw string and they use different rules for interpreting backslash
+    escape sequences.
+</p>
+
+<div class="for_info_only">
+    <p>
+        <strong>Example:</strong>
+    </p>
+    <pre class="brush: python">
+cowsay('Checkio rulezz') == r'''
+ ________________
+< Checkio rulezz >
+ ----------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+'''
+cowsay('A longtextwithonlyonespacetofittwolines.') == r'''
+ ________________________________________
+/ A                                      \
+\ longtextwithonlyonespacetofittwolines. /
+ ----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+'''
+
+cowsay('Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.') == r'''
+ _________________________________________
+/ Lorem ipsum dolor sit amet, consectetur \
+| adipisicing elit, sed do eiusmod tempor |
+| incididunt ut labore et dolore magna    |
+\ aliqua.                                 /
+ -----------------------------------------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+'''
+
+    </pre>
+</div>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    The original Cowsays are written in the Perl programming language,
+    and as such are easily adaptable to system tasks in Unix.
+    They can perform functions such as telling users their home directories are full,
+    that they have new mail, etc. Now you will write your own realisation for this classic unix program.
+    This concept can teach you how to prepare and format text for the console output.
+</p>
+
+<p>
+    <strong>Precondition:</strong>
+    0 &lt; len(text) &lt; 858;<br>
+    <strong>text</strong> can't consist of spaces only;<br>
+    <strong>text</strong> contains only ASCII letters, digits and punctuation.
+</p>
+
+<p><a href="https://py.checkio.org/en/mission/cowsay">See the task on CheckiO</a></p>

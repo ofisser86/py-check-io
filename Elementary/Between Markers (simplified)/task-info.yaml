@@ -1,0 +1,69 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: |
+    def between_markers(text: str, begin: str, end: str) -> str:
+        """
+            returns substring between two given markers
+        """
+        if begin not in text and end not in text:
+            return text
+        elif begin not in text:
+            return text[:text.index(end)]
+        elif end not in text:
+            return text[text.index(begin) + len(end) - 1:]
+        elif text.index(begin) > text.index(end):
+            return ""
+        else:
+            s = text.split(begin)
+            for i in s:
+                if end in i:
+                    return i.split(end)[0]
+        return ''
+
+
+    if __name__ == '__main__':
+        print('Example:')
+        print(between_markers('What is >apple<', '>', '<'))
+
+        # These "asserts" are used for self-checking and not for testing
+        assert between_markers('What is >apple<', '>', '<') == "apple"
+        assert between_markers('What is [apple]', '[', ']') == "apple"
+        assert between_markers('What is ><', '>', '<') == ""
+        assert between_markers('>apple<', '>', '<') == "apple"
+        print('Wow, you are doing pretty good. Time to check it!')
+  learner_created: false
+status: Solved
+code: |
+  def between_markers(text: str, begin: str, end: str) -> str:
+      """
+          returns substring between two given markers
+      """
+      if begin not in text and end not in text:
+          return text
+      elif begin not in text:
+          return text[:text.index(end)]
+      elif end not in text:
+          return text[text.index(begin) + len(end) - 1:]
+      elif text.index(begin) > text.index(end):
+          return ""
+      else:
+          s = text.split(begin)
+          for i in s:
+              if end in i:
+                  return i.split(end)[0]
+      return ''
+
+
+  if __name__ == '__main__':
+      print('Example:')
+      print(between_markers('What is >apple<', '>', '<'))
+
+      # These "asserts" are used for self-checking and not for testing
+      assert between_markers('What is >apple<', '>', '<') == "apple"
+      assert between_markers('What is [apple]', '[', ']') == "apple"
+      assert between_markers('What is ><', '>', '<') == ""
+      assert between_markers('>apple<', '>', '<') == "apple"
+      print('Wow, you are doing pretty good. Time to check it!')
+seconds_from_change: 1641740

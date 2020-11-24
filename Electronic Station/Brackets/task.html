@@ -1,0 +1,58 @@
+<div class="story">
+    <p>“Great!” Exclaimed Sofia. “Now we have the password.”</p>
+
+    <p>“To what exactly?” Quipped Nikola.</p>
+
+    <p>“Untold treasures, vast riches beyond belief! Gold! Silver! Silicon! Hydraulic Fluid! Anything your heart
+        desires!”</p>
+
+    <p>“And you’re going to do what with a password to absolutely nothing?” Nikola smirked.</p>
+
+    <p>“Oh... Right...”</p>
+
+    <p>Stephen spoke up. “Well, this door back here has a keypad. Only thing is the brackets look pretty busted up. We
+        could try fixing it and then punching in the password?”</p>
+
+    <p>“YES! That!” Sofia exclaimed.</p>
+
+</div>
+
+<p>
+    You are given an expression with numbers, brackets and operators.
+    For this task only the brackets matter. Brackets come in three flavors: "{}" "()" or "[]".
+    Brackets are used to determine scope or to restrict some expression. 
+    If a bracket is open, then it must be closed with a closing bracket of the same type. 
+    The scope of a bracket must not intersected by another bracket. 
+    In this task you should make a decision, whether to correct an expression or not based on the brackets. 
+    Do not worry about operators and operands.
+</p>
+
+<p><strong>Input: </strong>An expression with different of types brackets as a string (unicode).</p>
+
+<p><strong>Output: </strong>A verdict on the correctness of the expression in boolean (True or False).</p>
+
+<div class="for_info_only">
+    <p><strong>Example:</strong></p>
+<pre class="brush: python">
+checkio("((5+3)*2+1)") == True
+checkio("{[(3+1)+2]+}") == True
+checkio("(3+{1-1)}") == False
+checkio("[1+1]+(2*2)-{3/3}") == True
+checkio("(({[(((1)-2)+3)-3]/3}-3)") == False
+checkio("2+3") == True
+</pre>
+</div>
+
+<p class="for_info_only">
+    <strong>How it is used: </strong>
+    When you write code or complex expressions in a mathematical package,
+    you can get a huge headache when it comes to excess or missing brackets.
+    This concept can be useful for your own IDE.
+</p>
+
+<p><strong>Precondition: </strong><br>
+    There are only brackets ("{}" "()" or "[]"), digits or operators ("+" "-" "*" "/").<br>
+    0 &lt; len(expression) &lt; 10<sup>3</sup>
+</p>
+
+<p><a href="https://py.checkio.org/en/mission/brackets">See the task on CheckiO</a></p>

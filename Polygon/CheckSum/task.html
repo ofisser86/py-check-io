@@ -1,0 +1,275 @@
+<style>
+.task-description td
+{
+	align:         center;
+	border-bottom: 1px solid #000000;
+	border-top:    1px solid #000000;
+}
+.task-description .blank
+{
+	border-width: 0px
+}
+.task-description .left
+{
+	border-left: 1px solid #000000;
+	padding-left: 16px;
+}
+.task-description .right
+{
+	align:        center;
+	border-right: 1px solid #000000;
+}
+</style>
+<p>
+	Errors during transcription are rather common. Unintentional keystrokes can cause characters to be rearranged, dropped or inserted in manually typed text.
+</p>
+<p>
+	Luckily for the robots, you have ways to solve problems like this. Your CheckSum helps to reduce the likelihood of errors by introducing a <b>final character</b> that is calculated from the previous characters. With the proper reasoning, the final character can always be calculated. This way, when inputs are entered, you can instantly verify that the final character matches the character predicted by CheckSum. If the two do not match, the input is rejected. The end result is that you would see fewer data entry errors.    
+</p>
+<p>
+	<h3>How CheckSum Works:</h3>
+	CheckSum reasoning will need map points. This is a definition lookup for how to process the input necessary to generate the 
+	final character, which will be enable us instantly verify that our input is correct. 
+	In other words, for each sequence character of the input, we are confident there 
+	can only be <b>one possible input</b>, all thanks to this final character.
+	<br><br>
+	The steps you must take to obtain the final character are as follows: <br>
+	<ol>
+		<li style="padding-top: 8px; padding-left: 10%; width: 80%;">From the rightmost input, traverse from <b>right to left</b>, and apply 'map point character lookup' for even-indexed characters.</li>
+		<li style="padding-left: 10%; width: 80%;">Add map point results for even-indexed characters with the unchanged digits from the original number.</li>
+		<li style="padding-left: 10%; width: 80%;">Find the remainder of this sum with 10. For an example sum of 67, the remainder is 7. ( 67 modulo 10 = 7 )</li>
+		<li style="padding-left: 10%; width: 80%;">Your final character should be 0 if the sum is a multiple-of-10, but it should be 10 minus remainder if the sum is not a multiple-of-10.</li>
+	</ol>
+	To generate the 'map point character lookup' table: <br>
+	<ol>
+		<li style="padding-top: 8px; padding-left: 10%; width: 80%;">Double the value of a character.</li>
+		<li style="padding-left: 10%; width: 80%;">If the product of this doubling operation is greater than 9 (e.g: 7 * 2 = 14), reduce it by summing the digits of the product. (i.e., find its <b>digital root</b>. e.g., 10: 1 + 0 = 1, 14: 1 + 4 = 5) Only do this once. Even if the sum is greater than 9, leave it alone.</li>
+	</ol>
+</p>    
+<p>
+	<h3>Could you give me an example please?</h3>
+	Okay, take a look this example for a (pretend) account number: "7992739871". We will add final character to it,
+	so it looks something like: "7992739871<em>x</em>," with <em>x</em> being the final character-to-be-found.
+	<br><br>
+	Here is what a 'map point character lookup' table looks like for 0 through 9:
+	<br><br>
+	<table cellspacing="0" cols="16" border="0" style="margin-left: 15%;">
+		<colgroup width="129"></colgroup>
+		<colgroup width="18"></colgroup>
+		<colgroup span="14" width="36"></colgroup>
+		<tbody>
+			<tr><td class="left" style="height: 22px"><b>Digits</b></td>
+				<td>:</td>
+				<td sdval="0" sdnum="1033;"><b>0</b></td>
+				<td sdval="1" sdnum="1033;"><b>1</b></td>
+				<td sdval="2" sdnum="1033;"><b>2</b></td>
+				<td sdval="3" sdnum="1033;"><b>3</b></td>
+				<td sdval="4" sdnum="1033;"><b>4</b></td>
+				<td sdval="5" sdnum="1033;"><b>5</b></td>
+				<td sdval="6" sdnum="1033;"><b>6</b></td>
+				<td sdval="7" sdnum="1033;"><b>7</b></td>
+				<td sdval="8" sdnum="1033;"><b>8</b></td>
+				<td class="right" sdval="9" sdnum="1033;"><b>9</b></td>		
+			</tr>
+			<tr><td style="padding-left: 16px; border-bottom: 1px solid #000000; border-left: 1px solid #000000" height="22" align="LEFT"><b>Doubled</b></td>
+				<td style="border-bottom: 1px solid #000000" align="CENTER">:</td>
+				<td sdval="0" sdnum="1033;">0</td>
+				<td sdval="2" sdnum="1033;">2</td>
+				<td sdval="4" sdnum="1033;">4</td>
+				<td sdval="6" sdnum="1033;">6</td>
+				<td sdval="8" sdnum="1033;">8</td>
+				<td sdval="10" sdnum="1033;">10</td>
+				<td sdval="12" sdnum="1033;">12</td>
+				<td sdval="14" sdnum="1033;">14</td>
+				<td sdval="16" sdnum="1033;">16</td>
+				<td class="right" sdval="18" sdnum="1033;">18</td>
+			</tr>
+			<tr><td class="left" height="22" align="LEFT"><b>Reduced</b></td>
+				<td>:</td>
+				<td sdval="0" sdnum="1033;">0</td>
+				<td sdval="2" sdnum="1033;">2</td>
+				<td sdval="4" sdnum="1033;">4</td>
+				<td sdval="6" sdnum="1033;">6</td>
+				<td sdval="8" sdnum="1033;">8</td>
+				<td>1+0</td>
+				<td>1+2</td>
+				<td>1+4</td>
+				<td>1+6</td>
+				<td class="right">1+8</td>
+			</tr>
+			<tr>
+				<td style="border-bottom: 1px solid #000000; padding-left: 16px; border-left: 1px solid #000000" height="22" align="LEFT"><b>Map Point</b></td>
+				<td>:</td>
+				<td sdval="0" sdnum="1033;">0</td>
+				<td sdval="2" sdnum="1033;">2</td>
+				<td sdval="4" sdnum="1033;">4</td>
+				<td sdval="6" sdnum="1033;">6</td>
+				<td sdval="8" sdnum="1033;">8</td>
+				<td sdval="1" sdnum="1033;">1</td>
+				<td sdval="3" sdnum="1033;">3</td>
+				<td sdval="5" sdnum="1033;">5</td>
+				<td sdval="7" sdnum="1033;">7</td>
+				<td class="right" sdval="9" sdnum="1033;">9</td>		
+			</tr>
+		</tbody>
+	</table>
+<br><br>
+And here is how we will obtain final character:
+<br><br>
+<table cellspacing="0" cols="13" border="0" style="margin-left: 15%;">
+	<colgroup width="142"></colgroup>
+	<colgroup width="18"></colgroup>
+	<colgroup span="10" width="26"></colgroup>
+	<colgroup width="85"></colgroup>
+	<tbody>
+	<tr>
+		<td class="left" height="17" align="LEFT"><b>Index</b></td>
+		<td>:</td>
+		<td sdval="0" sdnum="1033;">0</td>
+		<td sdval="1" sdnum="1033;">1</td>
+		<td sdval="2" sdnum="1033;">2</td>
+		<td sdval="3" sdnum="1033;">3</td>
+		<td sdval="4" sdnum="1033;">4</td>
+		<td sdval="5" sdnum="1033;">5</td>
+		<td sdval="6" sdnum="1033;">6</td>
+		<td sdval="7" sdnum="1033;">7</td>
+		<td sdval="8" sdnum="1033;">8</td>
+		<td class="right" sdval="9" sdnum="1033;">9</td>
+	</tr>
+	<tr>
+		<td style="padding-left: 16px; border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" height="17" align="LEFT"><b>Reversed</b></td>
+		<td>:</td>
+		<td sdval="1" sdnum="1033;">1</td>
+		<td sdval="7" sdnum="1033;">7</td>
+		<td sdval="8" sdnum="1033;">8</td>
+		<td sdval="9" sdnum="1033;">9</td>
+		<td sdval="3" sdnum="1033;">3</td>
+		<td sdval="7" sdnum="1033;">7</td>
+		<td sdval="2" sdnum="1033;">2</td>
+		<td sdval="9" sdnum="1033;">9</td>
+		<td sdval="9" sdnum="1033;">9</td>
+		<td class="right" sdval="7" sdnum="1033;">7</td>
+	</tr>
+	<tr>
+		<td class="left" height="17" align="LEFT"><b>From table</b></td>
+		<td>:</td>
+		<td sdval="2" sdnum="1033;">2</td>
+		<td sdval="" sdnum="1033;"></td>
+		<td sdval="7" sdnum="1033;">7</td>
+		<td sdval="" sdnum="1033;"></td>
+		<td sdval="6" sdnum="1033;">6</td>
+		<td sdval="" sdnum="1033;"></td>
+		<td sdval="4" sdnum="1033;">4</td>
+		<td sdval="" sdnum="1033;"></td>
+		<td sdval="9" sdnum="1033;">9</td>
+		<td class="right" sdval="" sdnum="1033;"></td>
+		<td class="right" rowspan="2" align="center" ><b><font color="#0066CC">Total: 67</font></b></td>
+	</tr>
+	<tr>
+		<td class="left" height="17" align="LEFT"><b>Unchanged</b></td>
+		<td>:</td>
+		<td sdval="" sdnum="1033;"></td>
+		<td sdval="7" sdnum="1033;">7</td>
+		<td sdval="" sdnum="1033;"></td>
+		<td sdval="6" sdnum="1033;">9</td>
+		<td sdval="" sdnum="1033;"></td>
+		<td sdval="4" sdnum="1033;">7</td>
+		<td sdval="" sdnum="1033;"></td>
+		<td sdval="9" sdnum="1033;">9</td>
+		<td sdval="" sdnum="1033;"></td>
+		<td class="right" dval="7" sdnum="1033;">7</td>
+	</tr>
+	<tr>
+		<td class="left" rowspan="2" height="34" align="LEFT" valign="MIDDLE"><b>Final Character</b></td>
+		<td style="border-bottom: 1px solid #000000" rowspan="2" align="CENTER" valign="MIDDLE">:</td>
+		<td style="border-bottom: 1px solid #000000" colspan="8" rowspan="2" align="RIGHT" valign="MIDDLE">10 - ( 67 % 10 ) = 10 - 7 =</td>
+		<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" colspan="2" rowspan="2" align="CENTER" valign="MIDDLE" sdval="3" sdnum="1033;"><font size="4" style="color: #0066CC;">3</font></td>
+	</tr>
+</tbody></table>
+<br>
+	So, we can release the account number as follows: <span style="font-weight: bold; font-size: 1.2em;">799 273 9871 3</span>
+	<br>
+</p>
+<p>
+	<h3>Alphanumeric Input</h3>
+	To make this more interesting, we can use alphanumeric input, which is a possible combination of 10 digits and 26 capital letters. It means that we will have to upgrade our map point to support letters. How we achieve that? We use each character's ASCII value to help us determine the character sequence. For example: 'A' has an ASCII value 65. To determine its sequence in our map, we need to substract 48.
+	<br><br>
+	For this example, 'A' is 7 since 65 - 48 = 17, 17 * 2 = 34 and 3 + 4 = 7. (Remember to only apply 'map point character lookup' to even-indexed characters. If 'A' is an odd-indexed character, its value is 17)
+	<br>
+</p>
+<p>
+	<h3>Alphanumeric Example</h3>
+	Alright, we have another example here: "139MT". Let's see how we can obtain the final character... 
+	<br><br>
+	<table cellspacing="0" cols="13" border="0" style="margin-left: 8px;">
+		<colgroup width="142"></colgroup>
+		<colgroup width="18"></colgroup>
+		<colgroup span="10" width="26"></colgroup>
+		<colgroup width="85"></colgroup>
+		<tbody>
+			<tr>
+				<td class="left" height="17" align="LEFT"><b>Reversed</b></td>
+				<td>:</td>
+				<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" colspan="2" align="CENTER" valign="MIDDLE">T</td>
+				<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" colspan="2" align="CENTER" valign="MIDDLE">M</td>
+				<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" colspan="2" align="CENTER" valign="MIDDLE" sdval="9" sdnum="1033;">9</td>
+				<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" colspan="2" align="CENTER" valign="MIDDLE" sdval="3" sdnum="1033;">3</td>
+				<td style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" colspan="2" align="CENTER" valign="MIDDLE" sdval="1" sdnum="1033;">1</td>
+			</tr>
+			<tr>
+				<td class="left" height="17" align="LEFT"><b>Sum of digits</b></td>
+				<td>:</td>
+				<td style="border-bottom: 1px solid #000000" colspan="2" align="CENTER" valign="MIDDLE" sdval="9" sdnum="1033;"><b><font color="#0066CC">9</font></b></td>
+				<td style="border-bottom: 1px solid #000000" colspan="2" align="CENTER" valign="MIDDLE" sdval="29" sdnum="1033;">29</td>
+				<td style="border-bottom: 1px solid #000000" colspan="2" align="CENTER" valign="MIDDLE" sdval="9" sdnum="1033;"><b><font color="#0066CC">9</font></b></td>
+				<td style="border-bottom: 1px solid #000000" colspan="2" align="CENTER" valign="MIDDLE" sdval="3" sdnum="1033;">3</td>
+				<td style="border-bottom: 1px solid #000000;border-right: 1px solid #000000;" colspan="2" align="CENTER" valign="MIDDLE" sdval="2" sdnum="1033;"><b><font color="#0066CC">2</font></b></td>
+				<td class="right"><b><font color="#0066CC">Total: 52</font></b></td>
+			</tr>
+			<tr>
+				<td class="left" rowspan="2" height="34" align="LEFT" valign="MIDDLE"><b>Final Character</b></td>
+				<td style="border-bottom: 1px solid #000000" rowspan="2" align="CENTER" valign="MIDDLE">:</td>
+				<td style="border-bottom: 1px solid #000000" colspan="8" rowspan="2" align="CENTER" valign="MIDDLE">10 - ( 52 % 10 ) = 10 - 2 =</td>
+				<td style="border-bottom: 1px solid #000000; border-right: 1px solid #000000" colspan="2" rowspan="2" align="CENTER" valign="MIDDLE" sdval="8" sdnum="1033;"><font size="4" style="color: #0066CC;">8</font></td>
+			</tr>
+		</tbody>
+	</table>
+</p> 
+<p>
+	Here is detail for how we do it:
+	<ul>
+	<li>T:&nbsp; ASCII of 84, 84 - 48 = 36, 36 * 2 = 72, and 7 + 2 = 9</li>
+	<li>M:&nbsp; ASCII of 77, and 77 - 48 = 29</li>
+	<li>9:&nbsp; from map point is, 9, or ASCII of 57, 57 - 48 = 9, 9 * 2 = 18, and 1 + 8 = 9</li>
+	<li>3:&nbsp; just 3, or ASCII of 51, and 51 - 48 = 3</li>
+	<li>1:&nbsp; from map point is, 2, or ASCII of 49, 49 - 48 = 1, and 1 * 2 = 2</li>
+	<li>Sum of digits is 52, since 9 + 29 + 9 + 3 + 1 = 52</li>
+	<li>Final character is 8, since 10 - ( 52 % 10 ) = 10 - 2 = 8</li>
+	</ul>
+	<br>
+	Now it's time to test your CheckSum module!
+</p>
+
+<p>
+	<b>Input: </b> Unsanitized numeric or alphanumeric due to formatting purpose
+</p>
+
+<p>
+	<b>Output: </b> List of its final character and sum of digits
+</p>
+
+
+<div class="for_info_only">
+	<p>
+		<b>Example:</b>
+	</p>
+	<pre class="brush: python">checkio("799 273 9871") == ["3", 67]
+checkio("139-MT") == ["8", 52])
+checkio("123") == ["0", 10])
+checkio("999_999") == ["6", 54])
+checkio("+61 820 9231 55") == ["3", 37])
+checkio("VQ/WEWF/NY/8U") == ["9", 201])</pre>
+</div>
+
+
+<p><a href="https://py.checkio.org/en/mission/check-digit">See the task on CheckiO</a></p>

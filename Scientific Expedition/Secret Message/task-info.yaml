@@ -1,0 +1,25 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: "def find_message(text: str) -> str:\n    \"\"\"Find a secret message\"\"\"\
+    \n    return ''.join([i for i in text if i.isupper()])\n\nif __name__ == '__main__':\n\
+    \    print('Example:')\n    print(find_message(\"How are you? Eh, ok. Low or Lower?\
+    \ Ohhh.\"))\n    \n    #These \"asserts\" using only for self-checking and not\
+    \ necessary for auto-testing\n    assert find_message(\"How are you? Eh, ok. Low\
+    \ or Lower? Ohhh.\") == \"HELLO\", \"hello\"\n    assert find_message(\"hello\
+    \ world!\") == \"\", \"Nothing\"\n    assert find_message(\"HELLO WORLD!!!\")\
+    \ == \"HELLOWORLD\", \"Capitals\"\n    print(\"Coding complete? Click 'Check'\
+    \ to review your tests and earn cool rewards!\")\n"
+  learner_created: false
+status: Solved
+code: "def find_message(text: str) -> str:\n    \"\"\"Find a secret message\"\"\"\n\
+  \    return ''.join([i for i in text if i.isupper()])\n\nif __name__ == '__main__':\n\
+  \    print('Example:')\n    print(find_message(\"How are you? Eh, ok. Low or Lower?\
+  \ Ohhh.\"))\n    \n    #These \"asserts\" using only for self-checking and not necessary\
+  \ for auto-testing\n    assert find_message(\"How are you? Eh, ok. Low or Lower?\
+  \ Ohhh.\") == \"HELLO\", \"hello\"\n    assert find_message(\"hello world!\") ==\
+  \ \"\", \"Nothing\"\n    assert find_message(\"HELLO WORLD!!!\") == \"HELLOWORLD\"\
+  , \"Capitals\"\n    print(\"Coding complete? Click 'Check' to review your tests\
+  \ and earn cool rewards!\")\n"
+seconds_from_change: 25106811

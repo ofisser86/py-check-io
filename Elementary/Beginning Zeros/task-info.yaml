@@ -50,4 +50,4 @@ code: |
       assert beginning_zeros('012345679') == 1
       assert beginning_zeros('0000') == 4
       print("Coding complete? Click 'Check' to earn cool rewards!")
-seconds_from_change: 1908785
+seconds_from_change: 1998175

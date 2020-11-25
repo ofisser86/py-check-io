@@ -38,4 +38,4 @@ code: |
       assert backward_string_by_word('hello   world') == 'olleh   dlrow'
       assert backward_string_by_word('welcome to a game') == 'emoclew ot a emag'
       print("Coding complete? Click 'Check' to earn cool rewards!")
-seconds_from_change: 4129440
+seconds_from_change: 4218830

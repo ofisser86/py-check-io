@@ -19,4 +19,4 @@ code: "from functools import reduce \ndef checkio(number: int) -> int:\n    temp
   \ auto-testing\n    assert checkio(123405) == 120\n    assert checkio(999) == 729\n\
   \    assert checkio(1000) == 1\n    assert checkio(1111) == 1\n    print(\"Coding\
   \ complete? Click 'Check' to review your tests and earn cool rewards!\")\n"
-seconds_from_change: 25108564
+seconds_from_change: 25197953

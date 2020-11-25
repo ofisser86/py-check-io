@@ -30,4 +30,4 @@ code: "def left_join(phrases: tuple) -> str:\n    \"\"\"\n        Join strings a
   , \"One phrase\"\n    assert left_join((\"enough\", \"jokes\")) == \"enough,jokes\"\
   , \"Nothing to replace\"\n    print(\"Coding complete? Click 'Check' to review your\
   \ tests and earn cool rewards!\")\n"
-seconds_from_change: 1307526
+seconds_from_change: 1395467

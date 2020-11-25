@@ -23,4 +23,4 @@ code: "from typing import List, Any\n\ndef all_the_same(elements: List[Any]) -> 
   \ 1, 1]) == True\n    assert all_the_same([1, 2, 1]) == False\n    assert all_the_same(['a',\
   \ 'a', 'a']) == True\n    assert all_the_same([]) == True\n    assert all_the_same([1])\
   \ == True\n    print(\"Coding complete? Click 'Check' to earn cool rewards!\")"
-seconds_from_change: 1561429
+seconds_from_change: 1649370

@@ -2,6 +2,12 @@ def is_stressful(subj):
     """
         recognize stressful subject
     """
+    subj_list = subj.split()
+    for i in subj_list:
+        if '!' in i:
+            pass
+        if i.lower() in ("help", "asap", "urgent"):
+            return True
     return False
 
 

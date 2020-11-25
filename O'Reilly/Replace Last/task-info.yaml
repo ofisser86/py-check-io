@@ -42,4 +42,4 @@ code: |
       assert replace_last([1]) == [1]
       assert replace_last([]) == []
       print("Coding complete? Click 'Check' to earn cool rewards!")
-seconds_from_change: 1212274
+seconds_from_change: 1301664

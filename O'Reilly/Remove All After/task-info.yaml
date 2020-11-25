@@ -8,7 +8,11 @@ files:
 
     def remove_all_after(items: list, border: int) -> Iterable:
         # your code here
-        return items
+        if not items:
+            return []
+        elif border not in items:
+            return items
+        return items[:items.index(border) + 1]
 
 
     if __name__ == '__main__':
@@ -25,16 +29,17 @@ files:
         print("Coding complete? Click 'Check' to earn cool rewards!")
   learner_created: false
 status: Solved
-feedback:
-  message: All tests passed
-  time: Tue, 24 Nov 2020 09:27:43 UTC
 code: |
   from typing import Iterable
 
 
   def remove_all_after(items: list, border: int) -> Iterable:
       # your code here
-      return items
+      if not items:
+          return []
+      elif border not in items:
+          return items
+      return items[:items.index(border) + 1]
 
 
   if __name__ == '__main__':
@@ -49,4 +54,4 @@ code: |
       assert list(remove_all_after([], 0)) == []
       assert list(remove_all_after([7, 7, 7, 7, 7, 7, 7, 7, 7], 7)) == [7]
       print("Coding complete? Click 'Check' to earn cool rewards!")
-seconds_from_change: 9223372036854775807
+seconds_from_change: 87903

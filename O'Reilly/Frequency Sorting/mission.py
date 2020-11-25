@@ -1,11 +1,15 @@
+from collections import Counter
+
 def frequency_sorting(numbers):
     # replace this for solution
-    return numbers
+    result = [item for items, c in Counter(numbers).most_common()
+              for item in [items] * c]
+    return result
 
 
 if __name__ == '__main__':
     print("Example:")
-    print(frequency_sorting([1, 2, 3, 4, 5]))
+    print(frequency_sorting([3, 4, 11, 13, 11, 4, 4, 7, 3]))
 
     # These "asserts" using only for self-checking and not necessary for auto-testing
     assert frequency_sorting([1, 2, 3, 4, 5]) == [1, 2, 3, 4, 5], "Already sorted"

@@ -4,11 +4,12 @@ files:
   visible: true
   text: |
     from typing import List
+    from statistics import median
 
     def checkio(data: List[int]) -> [int, float]:
 
         #replace this for solution
-        return data[0]
+        return median(data)
 
     #These "asserts" using only for self-checking and not necessary for auto-testing
     if __name__ == '__main__':
@@ -23,14 +24,15 @@ files:
         assert checkio(list(range(1000000))) == 499999.5, "Long."
         print("Coding complete? Click 'Check' to earn cool rewards!")
   learner_created: false
-status: Unchecked
+status: Solved
 code: |
   from typing import List
+  from statistics import median
 
   def checkio(data: List[int]) -> [int, float]:
 
       #replace this for solution
-      return data[0]
+      return median(data)
 
   #These "asserts" using only for self-checking and not necessary for auto-testing
   if __name__ == '__main__':
@@ -44,4 +46,4 @@ code: |
       print("Start the long test")
       assert checkio(list(range(1000000))) == 499999.5, "Long."
       print("Coding complete? Click 'Check' to earn cool rewards!")
-seconds_from_change: 9223372036854775807
+seconds_from_change: 86771

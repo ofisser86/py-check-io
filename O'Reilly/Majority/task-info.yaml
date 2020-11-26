@@ -42,4 +42,4 @@ code: |
       assert is_majority([True]) == True
       assert is_majority([]) == False
       print("Coding complete? Click 'Check' to earn cool rewards!")
-seconds_from_change: 89391
+seconds_from_change: 167409

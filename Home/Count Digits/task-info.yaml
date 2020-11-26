@@ -44,4 +44,4 @@ code: |
       assert count_digits('5 plus 6 is') == 2
       assert count_digits('') == 0
       print("Coding complete? Click 'Check' to earn cool rewards!")
-seconds_from_change: 4128027
+seconds_from_change: 4206044

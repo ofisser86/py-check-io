@@ -2,7 +2,10 @@ from typing import Iterable
 
 
 def except_zero(items: list) -> Iterable:
-    # your code here
+    zero_list = [i for i in enumerate(items) if i[1] == 0]
+    items = sorted(items)[items.count(0):]
+    for i in zero_list:
+        items.insert(i[0], 0)
     return items
 
 

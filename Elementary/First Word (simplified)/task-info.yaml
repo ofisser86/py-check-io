@@ -18,4 +18,4 @@ code: "def first_word(text: str) -> str:\n    \"\"\"\n        returns the first 
   \ for an auto-testing\n    assert first_word(\"Hello world\") == \"Hello\"\n   \
   \ assert first_word(\"a word\") == \"a\"\n    assert first_word(\"hi\") == \"hi\"\
   \n    print(\"Coding complete? Click 'Check' to earn cool rewards!\")"
-seconds_from_change: 24350996
+seconds_from_change: 24429013

@@ -48,4 +48,4 @@ code: |
       assert sum_numbers('5 plus 6 is') == 11
       assert sum_numbers('') == 0
       print("Coding complete? Click 'Check' to earn cool rewards!")
-seconds_from_change: 4221135
+seconds_from_change: 4299152

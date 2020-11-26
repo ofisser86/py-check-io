@@ -24,4 +24,4 @@ code: "def index_power(array: list, n: int) -> int:\n    \"\"\"\n        Find Nt
   \ 1], 0) == 1, \"Zero power\"\n    assert index_power([1, 2], 3) == -1, \"IndexError\"\
   \n    print(\"Coding complete? Click 'Check' to review your tests and earn cool\
   \ rewards!\")\n"
-seconds_from_change: 25200065
+seconds_from_change: 25278083

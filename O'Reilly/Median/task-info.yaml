@@ -46,4 +46,4 @@ code: |
       print("Start the long test")
       assert checkio(list(range(1000000))) == 499999.5, "Long."
       print("Coding complete? Click 'Check' to earn cool rewards!")
-seconds_from_change: 164789
+seconds_from_change: 272262

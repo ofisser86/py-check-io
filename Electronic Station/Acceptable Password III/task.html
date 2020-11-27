@@ -8,7 +8,7 @@
 
 <ul>
     <li>the length should be bigger than 6;</li>
-    <li>should contain at least one digit.</li>
+    <li>should contain at least one digit, but cannot consist of just digits.</li>
 </ul>
 
 
@@ -35,6 +35,7 @@ is_acceptable_password('muchlonger') == False
 is_acceptable_password('ashort') == False
 is_acceptable_password('muchlonger5') == True
 is_acceptable_password('sh5') == False
+is_acceptable_password('1234567') == False
 </pre>
 
 </div>
@@ -44,5 +45,5 @@ is_acceptable_password('sh5') == False
     <strong>How it’s used: </strong>
     <i>For password verification form. Also it's good to learn how the task can be evaluated.</i>
 </p>
-<p><a href="https://py.checkio.org/mission/acceptable-password-ii/publications/category/clear">View solutions</a></p>
-<p><a href="https://py.checkio.org/en/mission/acceptable-password-ii">See the task on CheckiO</a></p>
+
+<p><a href="https://py.checkio.org/en/mission/acceptable-password-iii">See the task on CheckiO</a></p>

@@ -26,4 +26,4 @@ code: "def time_converter(time):\n    #replace this for solution\n    am = 'a.m.
   \ == '12:30 p.m.'\n    assert time_converter('09:00') == '9:00 a.m.'\n    assert\
   \ time_converter('23:15') == '11:15 p.m.'\n    print(\"Coding complete? Click 'Check'\
   \ to earn cool rewards!\")"
-seconds_from_change: 24937946
+seconds_from_change: 25045419

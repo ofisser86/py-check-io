@@ -1,6 +1,6 @@
 def reverse_ascending(items):
-    # your code here
-    return None
+    result = sorted(items, reverse=True)
+    return result
 
 
 if __name__ == '__main__':

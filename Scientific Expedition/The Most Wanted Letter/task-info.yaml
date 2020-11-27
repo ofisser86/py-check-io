@@ -66,4 +66,4 @@ code: |-
       print("Start the long test")
       assert checkio("a" * 9000 + "b" * 1000) == "a", "Long."
       print("The local tests are done.")
-seconds_from_change: 1899329
+seconds_from_change: 2006802

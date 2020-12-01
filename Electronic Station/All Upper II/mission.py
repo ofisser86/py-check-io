@@ -1,6 +1,6 @@
 def is_all_upper(text: str) -> bool:
     # your code here
-    return False
+    return text.isupper()
 
 
 if __name__ == '__main__':

@@ -1,0 +1,191 @@
+type: checkiO
+files:
+- name: mission.py
+  visible: true
+  text: |
+    # Taken from mission Acceptable Password III
+
+    # Taken from mission Acceptable Password II
+
+    # Taken from mission Acceptable Password I
+
+    def is_acceptable_password(password: str) -> bool:
+        # your code here
+        return len(password) > 6
+
+
+    if __name__ == '__main__':
+        print("Example:")
+        print(is_acceptable_password('short'))
+
+        # These "asserts" are used for self-checking and not for an auto-testing
+        assert is_acceptable_password('short') == False
+        assert is_acceptable_password('muchlonger') == True
+        assert is_acceptable_password('ashort') == False
+        print("Coding complete? Click 'Check' to earn cool rewards!")
+
+
+    def is_acceptable_password(password: str) -> bool:
+        if len(password) < 6:
+            return False
+
+        for i in password:
+            if i.isdigit():
+                return True
+        # your code here
+        return False
+
+
+    if __name__ == '__main__':
+        print("Example:")
+        print(is_acceptable_password('short'))
+
+        # These "asserts" are used for self-checking and not for an auto-testing
+        assert is_acceptable_password('short') == False
+        assert is_acceptable_password('muchlonger') == False
+        assert is_acceptable_password('ashort') == False
+        assert is_acceptable_password('muchlonger5') == True
+        assert is_acceptable_password('sh5') == False
+        print("Coding complete? Click 'Check' to earn cool rewards!")
+
+
+    def is_acceptable_password(password: str) -> bool:
+        if len(password) < 6 or password.isdigit():
+            return False
+
+        for i in password:
+            if i.isdigit():
+                return True
+        # your code here
+        return False
+
+
+    if __name__ == '__main__':
+        print("Example:")
+        print(is_acceptable_password('short'))
+
+        # These "asserts" are used for self-checking and not for an auto-testing
+        assert is_acceptable_password('short') == False
+        assert is_acceptable_password('muchlonger') == False
+        assert is_acceptable_password('ashort') == False
+        assert is_acceptable_password('muchlonger5') == True
+        assert is_acceptable_password('sh5') == False
+        assert is_acceptable_password('1234567') == False
+        print("Coding complete? Click 'Check' to earn cool rewards!")
+
+    def is_acceptable_password(password: str) -> bool:
+        # your code here
+        return False
+
+
+    if __name__ == '__main__':
+        print("Example:")
+        print(is_acceptable_password('short'))
+
+        # These "asserts" are used for self-checking and not for an auto-testing
+        assert is_acceptable_password('short') == False
+        assert is_acceptable_password('short54') == True
+        assert is_acceptable_password('muchlonger') == True
+        assert is_acceptable_password('ashort') == False
+        assert is_acceptable_password('muchlonger5') == True
+        assert is_acceptable_password('sh5') == False
+        assert is_acceptable_password('1234567') == False
+        assert is_acceptable_password('12345678910') == True
+        print("Coding complete? Click 'Check' to earn cool rewards!")
+  learner_created: false
+status: Unchecked
+feedback:
+  message: Failed to launch checking. For more information, see <a href="https://www.jetbrains.com/help/education/troubleshooting-guide.html#failed_to_launch_checking">the
+    Troubleshooting Guide</a>
+  time: Tue, 01 Dec 2020 07:01:30 UTC
+code: |
+  # Taken from mission Acceptable Password III
+
+  # Taken from mission Acceptable Password II
+
+  # Taken from mission Acceptable Password I
+
+  def is_acceptable_password(password: str) -> bool:
+      # your code here
+      return len(password) > 6
+
+
+  if __name__ == '__main__':
+      print("Example:")
+      print(is_acceptable_password('short'))
+
+      # These "asserts" are used for self-checking and not for an auto-testing
+      assert is_acceptable_password('short') == False
+      assert is_acceptable_password('muchlonger') == True
+      assert is_acceptable_password('ashort') == False
+      print("Coding complete? Click 'Check' to earn cool rewards!")
+
+
+  def is_acceptable_password(password: str) -> bool:
+      if len(password) < 6:
+          return False
+
+      for i in password:
+          if i.isdigit():
+              return True
+      # your code here
+      return False
+
+
+  if __name__ == '__main__':
+      print("Example:")
+      print(is_acceptable_password('short'))
+
+      # These "asserts" are used for self-checking and not for an auto-testing
+      assert is_acceptable_password('short') == False
+      assert is_acceptable_password('muchlonger') == False
+      assert is_acceptable_password('ashort') == False
+      assert is_acceptable_password('muchlonger5') == True
+      assert is_acceptable_password('sh5') == False
+      print("Coding complete? Click 'Check' to earn cool rewards!")
+
+
+  def is_acceptable_password(password: str) -> bool:
+      if len(password) < 6 or password.isdigit():
+          return False
+
+      for i in password:
+          if i.isdigit():
+              return True
+      # your code here
+      return False
+
+
+  if __name__ == '__main__':
+      print("Example:")
+      print(is_acceptable_password('short'))
+
+      # These "asserts" are used for self-checking and not for an auto-testing
+      assert is_acceptable_password('short') == False
+      assert is_acceptable_password('muchlonger') == False
+      assert is_acceptable_password('ashort') == False
+      assert is_acceptable_password('muchlonger5') == True
+      assert is_acceptable_password('sh5') == False
+      assert is_acceptable_password('1234567') == False
+      print("Coding complete? Click 'Check' to earn cool rewards!")
+
+  def is_acceptable_password(password: str) -> bool:
+      # your code here
+      return False
+
+
+  if __name__ == '__main__':
+      print("Example:")
+      print(is_acceptable_password('short'))
+
+      # These "asserts" are used for self-checking and not for an auto-testing
+      assert is_acceptable_password('short') == False
+      assert is_acceptable_password('short54') == True
+      assert is_acceptable_password('muchlonger') == True
+      assert is_acceptable_password('ashort') == False
+      assert is_acceptable_password('muchlonger5') == True
+      assert is_acceptable_password('sh5') == False
+      assert is_acceptable_password('1234567') == False
+      assert is_acceptable_password('12345678910') == True
+      print("Coding complete? Click 'Check' to earn cool rewards!")
+seconds_from_change: 9223372036854775807

@@ -50,4 +50,4 @@ code: |
       assert list(except_zero([4, 5, 3, 1, 1])) == [1, 1, 3, 4, 5]
       assert list(except_zero([0, 0])) == [0, 0]
       print("Coding complete? Click 'Check' to earn cool rewards!")
-seconds_from_change: 107271
+seconds_from_change: 429499

@@ -24,4 +24,4 @@ code: "def split_list(items: list) -> list:\n    if not items:\n        return [
   \ 2, 3, 4, 5]) == [[1, 2, 3], [4, 5]]\n    assert split_list([1]) == [[1], []]\n\
   \    assert split_list([]) == [[], []]\n    print(\"Coding complete? Click 'Check'\
   \ to earn cool rewards!\")\n"
-seconds_from_change: 1313468
+seconds_from_change: 1635696

@@ -30,4 +30,4 @@ code: "def two_teams(sailors):\n    #replace this for solution\n    team1 = []\n
   \ 22,\n        'Kale': 41,\n        'McCortney': 54}) == [\n            ['Fernandes',\
   \ 'Kale', 'McCortney'], \n            ['Johnson']\n            ]\n    print(\"Coding\
   \ complete? Click 'Check' to earn cool rewards!\")\n"
-seconds_from_change: 25378146
+seconds_from_change: 25700374

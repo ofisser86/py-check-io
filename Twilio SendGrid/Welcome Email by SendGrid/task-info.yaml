@@ -66,4 +66,4 @@ code: |
       # These "asserts" using only for self-checking and not necessary for auto-testing
       send_email('somebody@gmail.com', 'Some Body')
       print('Done')
-seconds_from_change: 185492
+seconds_from_change: 507720

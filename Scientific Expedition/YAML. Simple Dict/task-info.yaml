@@ -20,4 +20,4 @@ code: "def yaml(a):\n    # your code here\n    if len(a) > 1:\n        print({k.
   \ == {'age': 12, 'name': 'Alex'}\n    assert yaml(\"\"\"name: Alex Fox\nage: 12\n\
   \nclass: 12b\"\"\") == {'age': 12,\n 'class': '12b',\n 'name': 'Alex Fox'}\n   \
   \ print(\"Coding complete? Click 'Check' to earn cool rewards!\")\n"
-seconds_from_change: 280195
+seconds_from_change: 602423

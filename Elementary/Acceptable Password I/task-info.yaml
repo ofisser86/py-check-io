@@ -34,4 +34,4 @@ code: |
       assert is_acceptable_password('muchlonger') == True
       assert is_acceptable_password('ashort') == False
       print("Coding complete? Click 'Check' to earn cool rewards!")
-seconds_from_change: 962039
+seconds_from_change: 1284267

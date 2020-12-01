@@ -46,4 +46,4 @@ code: |
       assert list(replace_first([1])) == [1]
       assert list(replace_first([])) == []
       print("Coding complete? Click 'Check' to earn cool rewards!")
-seconds_from_change: 2184249
+seconds_from_change: 2506477

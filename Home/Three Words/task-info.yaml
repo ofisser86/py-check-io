@@ -52,4 +52,4 @@ code: |
       assert checkio("bla bla bla bla") == True, "Bla Bla"
       assert checkio("Hi") == False, "Hi"
       print("Coding complete? Click 'Check' to review your tests and earn cool rewards!")
-seconds_from_change: 4250211
+seconds_from_change: 4572439
